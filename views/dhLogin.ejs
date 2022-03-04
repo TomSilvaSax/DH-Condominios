@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <%- include("./partials/head") %> 
+        <title>DH Codomínios</title>
+    </head>
+<body>
+  <%- include("./partials/bordaLogin") %>
+  
+      <nav class="centro">
+        <img class="img"  src="/images/0a6e275e184bed54d780c8fb52038b99.png" alt="área condomínio">
+         <div class="grow"> 
+          <div class="boxVerde"></div>
+             <nav class="login">
+
+              
+                    <h1>Login</h1>
+                      <form class="menu" action="/login"  method="post">
+                          <label for="condominio">Condominío</label>
+                  
+                           <select name="condominio" id="condominio">
+                             <option selected disabled>Selecione</option>                     
+                              <option value="solarSim">Solar Sim</option>
+                             <option value="solarMais">Solar Mais</option>
+                             <option value="solarMenos">Solar Menos</option>
+                            </select>
+                  
+
+                           <label for="usuario">Usuário</label>
+                  
+                            <input type="text" name="usuario"id="usuario" required>
+                  
+                            <label for="senha">Senha</label>
+                  
+                            <input type="password" name="senha" id="senha" required>
+                            <br>
+                            <button type="submit">enviar</button>
+                         <p class="saudaçōes">Nossa Prioridade é morar bem!</p>
+                       </form>
+                       
+              </nav>
+            </div> 
+      </nav>
+
+      <%- include("./partials/bordaInferior") %>
+
+
+</body>
+</html>
