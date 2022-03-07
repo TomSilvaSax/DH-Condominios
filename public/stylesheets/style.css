@@ -239,11 +239,8 @@ form button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
   text-transform: uppercase;
- 
   color: #fff;
- 
 }
 
 .fotousuario{
