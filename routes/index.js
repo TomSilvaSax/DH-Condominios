@@ -13,6 +13,11 @@ router.get('/sobre', function(req, res){
     res.render('../views/sobre')
 });
 
+router.get('/cadastro', function(req, res){
+    res.render('../views/cadastro')
+});
 
-
+router.get('/controle', function(req, res){
+    res.render('../views/controle')
+});
 module.exports = router;
