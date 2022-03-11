@@ -1,48 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
-
-body{
-  
+body {
   margin: 0;
-  width: 100%;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   color: black;
-  background-color: #238ECB;
-  
+  background-color: #238ecb;
 }
-.sessao{
+.sessao {
   background-color: #fff;
   max-width: 95vw;
   margin: 0 auto;
 }
-.loga{
+.loga {
   width: 350px;
   height: 100px;
-  
 }
 
 header {
   width: auto;
-  background-color:#238ECB;
-
+  background-color: #238ecb;
 }
 
-.BordaSuperiror{
-  
+.BordaSuperiror {
   height: 90px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-
-
-header nav  ul li {
+header nav ul li {
   display: inline-block;
-  
 }
 
 li {
@@ -63,7 +52,7 @@ header nav ul li a:any-link {
 
 .menu-superior {
   display: flex;
-  
+
   justify-content: space-around;
 }
 
@@ -75,7 +64,7 @@ header nav ul li a:any-link {
   width: 64px;
 }
 @media (min-width: 1200px) {
-  .menu-superior{
+  .menu-superior {
     display: flex;
   }
 
@@ -84,36 +73,26 @@ header nav ul li a:any-link {
   }
 }
 
-
-
 /*TELA LOGIM*/
 
-
-.rodape{
+.rodape {
   width: 100vw;
   height: 90px;
-  background-color:#238ECB;
+  background-color: #238ecb;
   margin-bottom: 0;
   position: relative;
   z-index: 10;
   box-shadow: 0px 5px 10px;
-  
- 
 }
 
-
-.sobre{
-  
-
+.sobre {
   justify-content: space-around;
   width: auto;
   height: 750px;
   display: flex;
-  
-  
 }
 
-.usuario{
+.usuario {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -122,34 +101,29 @@ header nav ul li a:any-link {
   font-size: 25px;
 }
 
-.fotousuario{
+.fotousuario {
   height: 50px;
   width: 50px;
-  background-color:#d9e1e6;
+  background-color: #d9e1e6;
   border-radius: 30px 30px;
- 
 }
-.imgSobre img{
-  max-height:700vh;
+.imgSobre img {
+  max-height: 700vh;
   max-width: 900vw;
   z-index: 1;
   margin-top: 0px;
-  
-  
-   
 }
-.textSobre{
+.textSobre {
   display: flex;
   flex-direction: column;
   text-align: center;
   text-decoration: none;
-  
+
   width: 1000px;
   height: auto;
 }
 
-.trabalho ul{
-
+.trabalho ul {
   display: flex;
   flex-direction: column;
   text-decoration-style: none;
