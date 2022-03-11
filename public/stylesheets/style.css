@@ -7,9 +7,14 @@ body{
   width: 100%;
   font-family: 'Nunito', sans-serif;
   color: black;
+  background-color: #238ECB;
   
 }
-
+.sessao{
+  background-color: #fff;
+  max-width: 95vw;
+  margin: 0 auto;
+}
 .loga{
   width: 350px;
   height: 100px;
@@ -53,21 +58,12 @@ header nav ul li a:any-link {
   padding: 10px;
   font-size: 30px;
 }
-.img{
-  width: auto;
-  height: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-    
-}
-
 
 /* Estylo Menu */
 
 .menu-superior {
-  display: none;
- 
+  display: flex;
+  
   justify-content: space-around;
 }
 
@@ -116,18 +112,6 @@ header nav ul li a:any-link {
   
   
 }
-.ladoDireito{
-  width: 40px;
-  height: auto;
-  margin: 0px;
-  background-color:#238ECB;
-}
-.ladoEsquerdo{
-  width: 40px;
-  height: auto;
-  margin: 0px;
-  background-color:#238ECB;
-}
 
 .usuario{
   display: flex;
@@ -146,11 +130,12 @@ header nav ul li a:any-link {
  
 }
 .imgSobre img{
-  height: 400px;
-  width: 500px;
+  max-height:700vh;
+  max-width: 900vw;
   z-index: 1;
   margin-top: 0px;
-  padding: 0;
+  
+  
    
 }
 .textSobre{
@@ -158,4 +143,14 @@ header nav ul li a:any-link {
   flex-direction: column;
   text-align: center;
   text-decoration: none;
+  
+  width: 1000px;
+  height: auto;
+}
+
+.trabalho ul{
+
+  display: flex;
+  flex-direction: column;
+  text-decoration-style: none;
 }

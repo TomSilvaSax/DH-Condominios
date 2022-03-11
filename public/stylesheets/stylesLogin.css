@@ -11,7 +11,7 @@ body{
   background-image: url("/images/areaLazer.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
 
 
 }
@@ -95,9 +95,20 @@ header nav ul li a:any-link {
   color: #fff;
   display: inline-block;
   
+  
+}
+#option {
+  font-size: 30px ;
+}
+select {
+  height: 30px;
+  border-radius: 15px 15px;
 }
 
-
+input{
+  height: 30px;
+  border-radius: 15px 15px;
+}
 .grow:hover
 { 
         -webkit-transform: scale(1.1);
@@ -114,7 +125,8 @@ header nav ul li a:any-link {
   color: black;
   position: relative;
   font-family: 'Nunito', sans-serif;
-  top: -90px;
+  top: -100px;
+  font-weight: bold;
 }
 
 
@@ -126,17 +138,23 @@ form button[type=submit] {
     cursor: pointer;
     font-family: 'aaux_proboldregular', sans-serif;
     font-size: 2rem;
-    margin: 0 0 0 0;
-    padding: 5px;
+    margin: 0 0 0 70px;
+    padding: 4px;
     text-transform: uppercase;
     float: right;
     transition: all ease .3s;
+    position: relative;
+    top: -20px;
+    width: 200px;
 }
 
 .saudaçōes{
   text-align: center;
   font-size: 25px;
-  margin: 0px;
+  margin: 0;
+  margin-left: 0px;
+  position: relative;
+  top:-20px ;
  
 }
 
