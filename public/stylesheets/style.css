@@ -25,6 +25,8 @@ header {
   height: 90px;
   margin: 0 auto;
   padding: 0 20px;
+  max-width: 1280px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +54,6 @@ header nav ul li a:any-link {
 
 .menu-superior {
   display: flex;
-
   justify-content: space-around;
 }
 
@@ -61,7 +62,7 @@ header nav ul li a:any-link {
 }
 
 .menu-mobile img {
-  width: 64px;
+  width: 64px;  
 }
 @media (min-width: 1200px) {
   .menu-superior {
@@ -95,8 +96,11 @@ header nav ul li a:any-link {
 .usuario {
   display: flex;
   align-items: center;
+  font-weight: 700;
+  font-size: 25px;
   justify-content: space-around;
   text-transform: uppercase;
+  gap: 20px;
   color: #fff;
   font-size: 25px;
 }

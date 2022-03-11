@@ -73,7 +73,6 @@ header nav ul li a:any-link {
 .menu-superior {
     display: none;
     
-    justify-content: space-around;
   }
   
   .menu-mobile {
@@ -86,6 +85,7 @@ header nav ul li a:any-link {
   @media (min-width: 1200px) {
     .menu-superior{
       display: flex;
+      gap: 30px;
     }
   
     .menu-mobile {
