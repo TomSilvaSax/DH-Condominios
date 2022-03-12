@@ -2,29 +2,21 @@
 <html lang="pt-br">
 
 <head>
-
-    <head>
-        <%- include("./partials/head") %>
-            <link rel="stylesheet" href="/stylesheets/style.css" />
-            <title>Sobre DH</title>
-    </head>
-
+    <%- include("./partials/head") %>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Sobre DH</title>
 </head>
 
 <body>
-    <header>
-        <%- include("./partials/bordaSuperior") %>
-
-    </header>
+    <%- include("./partials/bordaSuperior") %>
     <div class="sessao">
-        <nav class="sobre">
-
-            <nav class="imgSobre">
+        <!-- não pode ter mais de um nav por página -->
+        <div class="sobre">
+            <div class="imgSobre">
                 <img src="/images/fenseg.jpeg" alt="imagem condominio">
+            </div>
 
-            </nav>
-
-            <nav class="textSobre">
+            <div class="textSobre">
                 <h2>Sobre a DH Condominios</h2>
                 <p>
                     DH Condominios esta voltada ao ramo de administração de condominios, trazendo facilidade e
@@ -56,9 +48,9 @@
                         Venha você também ser nosso cliente!
                     </p>
                     </p>
-            </nav>
+            </div>
 
-        </nav>
+        </div>
 
     </div>
     <%- include("./partials/bordaInferior") %>
