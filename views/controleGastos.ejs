@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include("./partials/head") %>
+    <title>Controle</title>
+    <link rel="stylesheet" href="/stylesheets/styleControle.css" />
+</head>
+    
+  
+<body>
+    <header>
+        <%- include("./partials/bordaSuperior") %>
+    </header>
+<%//as informacoes serao recebidas pelo metodo Get//%>
+
+<div class="TelaCadastro">
+        <div class="TelaCadastroMenu">
+            <ul>
+                <li><a href="/cadastro">Cadastro de Usuario</a></li>
+                <br>
+                <li><a href="">Cadastro de gastos</a></li>
+                <br>
+                <li><a href="">Anuncios Condominio</a></li>
+                <br>
+                <li><a href="">Controle reserva</a></li>
+                <br>
+                <li><a href=""></a></li>
+                <br>
+                <li><a href=""></a></li>
+                <br>
+                <li><a href=""></a></li>
+                <br>
+              </ul>
+        </div>   
+    <div id="main-container">
+        <h1>Cadastro de Gastos</h1>
+        <form id="register-form">
+
+            <div class="formUsuario">
+                <label for="usuario">Usuario</label>
+                <input type="email" name="usuario" id="usuario" placeholder="Digite o E-mail ou CPF do Usuario">
+                <label for="usuario">Nome Usuario</label>
+                <input type="email" name="usuario" id="usuario" placeholder="nome Usuario">
+            </div>
+
+            <div class="form">
+                <div>
+                  <label for="gas">Consumo Gás</label>
+                  <input type="number" name="gas" id="gas" placeholder="Digite o consumo de Gás">
+                </div>
+                <div>
+                  <label for="agua">Consomo Água</label>
+                  <input type="text" name="agua" id="agua" placeholder="Digite o consumo de agua">
+                </div>
+                <div>
+                  <label for="multa">Multa</label>
+                  <input type="number" name="multa" id="multa" placeholder="Digite o valor da Multa">
+                </div>
+                <div>
+                  <label for="taxa do condominio">Taxa do condominio</label>
+                  <input type="text" name="taxa" id="taxa" placeholder="Digite o valor da Taxa do condominio">
+                </div>
+            </div> 
+            <div class="valores">
+                <input type="text" id="Total" placeholder="Total dos Valores">
+           
+                <input type="button" id="gerar-boleto" value="Gerar Boleto">
+            </div>
+        </form>
+    </div>
+          
+</div>
+</div>           
+           <%- include("./partials/bordaInferior") %>
+   
+</body>
+</html>

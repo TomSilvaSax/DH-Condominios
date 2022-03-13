@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include("./partials/head") %>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/stylesheets/styleCadastro.css" />
+</head>
+
+<body>
+    <header>
+        <%- include("./partials/bordaSuperior") %>
+
+    </header>
+<%//as informacoes serao recebidas pelo metodo Get//%>
+
+
+<div class="TelaCadastro">
+    <div class="TelaCadastroMenu">
+        <ul>
+            
+            <li><a href="controle">Cadastro de gastos</a></li>
+            <br>
+            <li><a href="">Anuncios Condominio</a></li>
+            <br>
+            <li><a href="">Controle reserva</a></li>
+            <br>
+            <li><a href=""></a></li>
+            <br>
+            <li><a href=""></a></li>
+            <br>
+            <li><a href=""></a></li>
+            <br>
+            <li><a href=""></a></li>
+            <br>
+          </ul>
+    </div>     
+    <div id="main-container">
+        <h1>Cadastro de Usuario</h1>
+            <form id="register-form">
+            
+                <div class="formUsuario">
+                    <label for="Nome">Nome</label>
+                    
+                     <input type="text" name="nome" id="nome" placeholder="Digite o Nome do Usuario">
+                 
+                    <label for="CPF">CPF</label>
+                    <input type="number" name="CPF" id="CPF" placeholder="Digite o CPF do Usuario">
+                  
+                    <label for="E-mail">E-Mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite o E-mail do Usuario">   
+                    
+                </div>
+                <div class="foto"></div>
+            </form>
+                    
+
+
+                    
+                
+            <div class="form">
+                        <label for="Apartamento">Apartamento</label>
+                        <div class="half-box">
+                            <input type="text" name="Apartamento" id="Apartamento" placeholder="Digite o Apartamento">
+                            <input type="text" name="Bloco" id="Bloco" placeholder="Digite o Bloco">
+                        </div>
+                    </div>
+            </form>
+        <div class="obs">
+            <label for="bservação">Observação</label>
+                 <input type="text" name="Observação" size="120" maxlength="30">
+        </div> 
+</div>
+</div>           
+
+          
+            <%- include("./partials/bordaInferior") %>
+    
+</body>
+</html>

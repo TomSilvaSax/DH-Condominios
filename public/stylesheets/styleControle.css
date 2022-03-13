@@ -1,0 +1,266 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  color: black;
+  background: url("/images/areaLazer.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.loga{
+  width: 350px;
+  height: 100px;
+  
+}
+
+header {
+  width: auto;
+  background-color:#238ECB;
+
+}
+
+.BordaSuperior{
+  
+  height: 90px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+
+header nav  ul li {
+  display: inline-block;
+  
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+header nav ul li a:any-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  font-size: 30px;
+}
+.img{
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+    
+}
+
+
+/* Estylo Menu */
+
+.menu-superior {
+    display: none;
+    
+  }
+  
+  .menu-mobile {
+    display: flex;
+  }
+  
+  .menu-mobile img {
+    width: 64px;
+  }
+  @media (min-width: 1200px) {
+    .menu-superior{
+      display: flex;
+      gap: 30px;
+    }
+  
+    .menu-mobile {
+      display: none;
+    }
+  }
+  
+  .usuario{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 25px;
+  }
+  
+  .fotousuario{
+    height: 50px;
+    width: 50px;
+    background-color:#d9e1e6;
+    border-radius: 30px 30px;
+   
+  }
+
+  /* Tela Menu Lateral*/
+
+  .TelaCadastroMenu{
+    background-color: rgb(253, 255, 250);
+    border-radius: 60px 60px;
+    width: 20vw;
+    height: 70vh;
+    margin-right: 20px;
+    margin-left: 50px;
+    text-decoration: none;
+  
+
+
+  
+    
+  }
+
+  .TelaCadastroMenu ul li a:any-link {
+    text-decoration: none;
+   text-transform: uppercase;
+   font-weight: 700;
+   color: rgb(10, 10, 10);
+   display: inline-block;
+   padding: 10px;
+   border-radius: solid 1px;
+   border-radius: 60px 60px;
+   background-color: rgba(237, 248, 241, 0.9);
+    border: solid #0c0d0e 1px;
+    margin-right: 30px;
+    margin-left: 10px;
+    display: flex;
+    list-style-type: none;
+
+  }
+
+    
+
+
+  /*Telas cadastro*/
+
+.TelaCadastro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 3;
+    margin-right: 50px;
+}
+input{
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 60px 60px;
+    padding: 15px;
+    
+
+}
+
+register-form{
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+#main-container {
+    background-color: rgb(253, 255, 250);
+    border-radius: 60px 60px;
+    z-index: 1;
+    max-width: 90vw;
+    height: 70vh;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    
+     
+}
+
+#main-container h1 {
+    text-align: center;
+    font-size: 60px;
+    border-radius: 60px 60px;
+    background-color: rgba(237, 248, 241, 0.9);
+    border: solid #0c0d0e;
+    height: 70px;
+    max-width: 70vw;
+    margin-left:  50px;
+    margin-right: 50px;
+    position: relative;
+    top:20px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px; 
+    
+}
+
+.formUsuario {
+    width:  auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.formUsuario input {
+    width:  1000px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    padding: 10px;
+    
+}
+    
+.valores{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    
+
+}
+.valores input{
+   
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+
+.rodape {
+  width: 100vw;
+  height: 90px;
+  background-color: #238ecb;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 0;
+  z-index: 10;
+  box-shadow: 0px 5px 10px;
+}
+ 

@@ -14,10 +14,10 @@ router.get('/sobre', function(req, res){
 });
 
 router.get('/cadastro', function(req, res){
-    res.render('../views/cadastro')
+    res.render('../views/cadastroUsuario')
 });
 
 router.get('/controle', function(req, res){
-    res.render('../views/controle')
+    res.render('../views/controleGastos')
 });
 module.exports = router;
