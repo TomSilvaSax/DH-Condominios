@@ -31,7 +31,15 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
+.usuario a:any-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  font-size: 30px;
+}
 header nav ul li {
   display: inline-block;
 }

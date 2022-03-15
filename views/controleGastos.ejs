@@ -16,41 +16,42 @@
 <div class="TelaCadastro">
         <div class="TelaCadastroMenu">
             <ul>
-                <li><a href="/cadastro">Cadastro de Usuario</a></li>
+            
+                <li><a href="cadastro">Cadastro de Usuário</a></li>
                 <br>
-                <li><a href="">Cadastro de gastos</a></li>
-                <br>
-                <li><a href="">Anuncios Condominio</a></li>
+                <li><a href=""></a></li>
                 <br>
                 <li><a href="">Controle reserva</a></li>
                 <br>
-                <li><a href=""></a></li>
+                <li><a href="">Tela Serviços</a></li>
                 <br>
-                <li><a href=""></a></li>
+                <li><a href="">Tela Contatos</a></li>
                 <br>
-                <li><a href=""></a></li>
+                <li><a href="">Sobre</a></li>
+                <br>
+                <li><a href="">Anuncio Condominio </a></li>
                 <br>
               </ul>
         </div>   
     <div id="main-container">
         <h1>Cadastro de Gastos</h1>
-        <form id="register-form">
-
+        
+        <form  id="register-form" action="" method="post" >
             <div class="formUsuario">
-                <label for="usuario">Usuario</label>
-                <input type="email" name="usuario" id="usuario" placeholder="Digite o E-mail ou CPF do Usuario">
-                <label for="usuario">Nome Usuario</label>
-                <input type="email" name="usuario" id="usuario" placeholder="nome Usuario">
+                <label for="usuario">Usuário</label>
+                <input type="email" name="usuario" id="usuario" placeholder="Digite o E-mail ou CPF do Usuário">
+                <label for="usuario">Nome Usuário</label>
+                <input type="email" name="usuario" id="usuario" placeholder="nome Usuário">
             </div>
-
-            <div class="form">
+                    
+            <div class="form"> <% //utilizar metodo post do modulo 5 %>
                 <div>
                   <label for="gas">Consumo Gás</label>
                   <input type="number" name="gas" id="gas" placeholder="Digite o consumo de Gás">
                 </div>
                 <div>
                   <label for="agua">Consomo Água</label>
-                  <input type="text" name="agua" id="agua" placeholder="Digite o consumo de agua">
+                  <input type="text" name="agua" id="agua" placeholder="Digite o consumo de água">
                 </div>
                 <div>
                   <label for="multa">Multa</label>
@@ -62,9 +63,10 @@
                 </div>
             </div> 
             <div class="valores">
-                <input type="text" id="Total" placeholder="Total dos Valores">
-           
-                <input type="button" id="gerar-boleto" value="Gerar Boleto">
+                <div class="total">
+                    <a href="">
+                </div>
+                <input type="button" id="salvar" value="salva">
             </div>
         </form>
     </div>
