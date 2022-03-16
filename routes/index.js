@@ -23,4 +23,8 @@ router.get('/cadastro', function(req, res){
 router.get('/controle', function(req, res){
     res.render('../views/controleGastos')
 });
+router.get('/servicos', function(req, res){
+    res.render('../views/servicos')
+});
+
 module.exports = router;
