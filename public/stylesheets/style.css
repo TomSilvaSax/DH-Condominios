@@ -1,47 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
 
+
+* {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
   color: black;
-  background-color: #238ecb;
-}
-.sessao {
-  background-color: #fff;
-  max-width: 95vw;
-  margin: 0 auto;
-}
-.loga {
-  width: 350px;
-  height: 100px;
-}
-
-header {
-  width: auto;
-  background-color: #238ecb;
-}
-
-.BordaSuperior {
-  height: 90px;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1280px;
-  width: 100%;
+  background: url("/images/areaLazer.png") no-repeat center center fixed;
+  background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
+ 
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #238ECB;
   align-items: center;
+  padding: 8px;
+  height: 70px;
+  box-shadow: -3px 9px 10px rgba(201, 213, 231, 0.9);
 }
+
+.loga{
+  width: 300px;
+  height: 70px;
+}
+
+
 .usuario a:any-link {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fff;
+    text-decoration: none; /*Tira a linha de baixo*/
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    margin: 10px 20px 0 0;
+    font-size: 10px;
+  }
+
+
+header nav  ul li {
   display: inline-block;
-  padding: 10px;
-  font-size: 30px;
-}
-header nav ul li {
-  display: inline-block;
+  
 }
 
 li {
@@ -49,41 +60,81 @@ li {
   text-align: -webkit-match-parent;
 }
 header nav ul li a:any-link {
-  text-decoration: none;
+  text-decoration: none; /*Tira a linha de baixo*/
   text-transform: uppercase;
-  font-weight: 700;
   color: #fff;
   display: inline-block;
-  padding: 10px;
-  font-size: 30px;
+  margin: 10px 20px 0 0;
+  font-size: 20px;
+  align-items: center;
 }
+.img{
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+    
+}
+
 
 /* Estylo Menu */
 
 .menu-superior {
-  display: flex;
-  justify-content: space-around;
-}
-
-.menu-mobile {
-  display: flex;
-}
-
-.menu-mobile img {
-  width: 64px;  
-}
-@media (min-width: 1200px) {
-  .menu-superior {
+    display: none;
+    
+  }
+  
+  .menu-mobile {
     display: flex;
   }
-
-  .menu-mobile {
-    display: none;
+  
+  .menu-mobile img {
+    width: 64px;
   }
-}
+  @media (min-width: 856px) {
+    .menu-superior{
+      display: flex;
+      gap: 30px;
+    }
+  
+    .menu-mobile {
+      display: none;
+    }
+  }
+  
+  .usuario{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 25px;
+  }
+  
+  .fotousuario{
+    height: 50px;
+    width: 50px;
+    background-color:#d9e1e6;
+    border-radius: 30px 30px;
+   
+  }
+
 
 /*TELA LOGIM*/
 
+.sessao{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.sobre {
+  justify-content: space-around;
+  width: auto;
+  height: 750px;
+  display: flex;
+}
 .rodape {
   width: 100vw;
   height: 90px;
@@ -94,12 +145,7 @@ header nav ul li a:any-link {
   box-shadow: 0px 5px 10px;
 }
 
-.sobre {
-  justify-content: space-around;
-  width: auto;
-  height: 750px;
-  display: flex;
-}
+
 
 .usuario {
   display: flex;
