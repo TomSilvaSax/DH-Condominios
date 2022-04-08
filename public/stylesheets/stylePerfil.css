@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
+* {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
 body {
   margin: 0;
-  width: 100%;
   font-family: "Nunito", sans-serif;
   color: black;
   background: url("/images/areaLazer.png") no-repeat center center fixed;
@@ -10,39 +18,34 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
+ 
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #238ECB;
+  align-items: center;
+  padding: 8px;
+  height: 70px;
+  box-shadow: -3px 9px 10px rgba(201, 213, 231, 0.9);
 }
 
 .loga{
-  width: 350px;
-  height: 100px;
-  
+  width: 300px;
+  height: 70px;
 }
 
-header {
-  width: auto;
-  background-color:#238ECB;
 
-}
-
-.BordaSuperior{
-  
-  height: 90px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
 .usuario a:any-link {
-    text-decoration: none;
+    text-decoration: none; /*Tira a linha de baixo*/
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     display: inline-block;
-    padding: 10px;
-    font-size: 30px;
+    margin: 10px 20px 0 0;
+    font-size: 10px;
   }
 
 
@@ -56,13 +59,13 @@ li {
   text-align: -webkit-match-parent;
 }
 header nav ul li a:any-link {
-  text-decoration: none;
+  text-decoration: none; /*Tira a linha de baixo*/
   text-transform: uppercase;
-  font-weight: 700;
   color: #fff;
   display: inline-block;
-  padding: 10px;
-  font-size: 30px;
+  margin: 10px 20px 0 0;
+  font-size: 20px;
+  align-items: center;
 }
 .img{
   width: auto;
@@ -88,7 +91,7 @@ header nav ul li a:any-link {
   .menu-mobile img {
     width: 64px;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 856px) {
     .menu-superior{
       display: flex;
       gap: 30px;
@@ -118,36 +121,32 @@ header nav ul li a:any-link {
 
   /* Tela Menu Lateral*/
 
-  .TelaCadastroMenu{
-    background-color: rgb(253, 255, 250);
-    border-radius: 60px 60px;
-    width: 20vw;
-    height: 70vh;
-    margin-right: 20px;
-    margin-left: 50px;
+  .TelaCadastroMenu {
+    background-color: rgb(251, 252, 251);
+    border-radius: 10px 10px;
+    padding:  10px;
     text-decoration: none;
     list-style-type: none;
-
-
-  
     
   }
 
-  .TelaCadastroMenu ul li a:any-link {
+  .TelaCadastroMenu a:any-link {
     text-decoration: none;
-   text-transform: uppercase;
-   font-weight: 700;
-   color: rgb(10, 10, 10);
-   display: inline-block;
-   padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(10, 10, 10);
+    display: inline-block;
+    padding: 15px;
    border-radius: solid 1px;
-   border-radius: 60px 60px;
+   border-radius: 20px 20px;
    background-color: rgba(237, 248, 241, 0.9);
     border: solid #0c0d0e 1px;
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-top: 10px;
     display: flex;
    list-style-type: none;
+   font-size: 10px;
+   align-items: center;
+   
 
   }
 
@@ -159,7 +158,8 @@ header nav ul li a:any-link {
     width: 150px;
     height: 210px;
     border: solid #0c0d0e;
-    background-color: bisque;
+    background-color: rgb(244, 208, 165);
+   
     
   }
   
@@ -170,30 +170,29 @@ header nav ul li a:any-link {
     z-index: 3;
     margin-right: 20px;
     margin-left:  20px;
+    padding: 0 10px;
+   
    
 }
 input{
     display: block;
     margin-left: 5px;
     margin-right: 5px;
-    border-radius: 60px 60px;
+    border-radius: 20px 20px;
     padding: 15px;
     
 
 }
 
-
 #register-form{
 
     display: flex;
+    justify-content: space-between;
     margin-left:  80px;
     margin-right: 80px;
-    
+    padding: 10px;
       
   }
-
-
-
 
 #main-container {
     background-color: rgb(253, 255, 250);
@@ -201,24 +200,22 @@ input{
     z-index: 1;
     max-width: auto;
     height: 70vh;
-    font-size: 30px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     margin-left:  30px;
-    margin-right: 30px;
-    
-     
+    margin-right: 30px; 
 }
 
 #main-container h1 {
     text-align: center;
-    font-size: 60px;
-    border-radius: 60px 60px;
+    font-size: 30px;
+    border-radius: 20px 20px;
     background-color: rgba(237, 248, 241, 0.9);
     border: solid #0c0d0e;
-    height: 70px;
     margin-left:  60px;
     margin-right: 60px;
+    margin-top: 10px;
 
 }
 
@@ -226,7 +223,7 @@ input{
     margin: 20px;
     width: 50PX;
     font-weight: bold;
-    font-size: 30px; 
+    font-size: 20px; 
     margin-left:  80px;
     margin-right: 80px;
     text-align: center;
@@ -235,63 +232,44 @@ input{
 
 .half-box{
   display: flex;
+  justify-content: space-between;
   
 }
 .half-box input{
+  
   text-align: center;
-  width: 200px;
-
+  padding: 5px;
+  width: 80px;
+  height: 30px;
 }
 .formUsuario {
     
     margin-left: 30px;
     margin-right: 50px;
-    text-align: center;
-    font-size: 30px;
+    text-align: start;
+    font-size: 20px;
     font-weight: bold;
     
     
 }
-.formUsuario input {
+div > input {
     width:  30vw;
-    margin-left: 50px;
-    margin-right: 50px;
-    text-align: center;
     padding: 10px;
+    background-color: beige;
     
 }
-    
-.valores{
-    display: flex;
-    margin-left: 50px;
-    margin-right: 50px;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-    
-    
 
-}
-.valores input{
-   
-    margin-left: 50px;
-    margin-right: 50px;
-    justify-content: center;
-    text-align: center;
-    
-    
-
-}
 .butao input{
     
-        position: relative;
-        left: 300px;
+       
+     
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 20px;
         color: rgb(12, 12, 12);
         width: 200px;
-        background-color: #238ECB;
+        background-color: #bcdef2;
+        cursor: pointer;
    
 }
 
@@ -300,6 +278,7 @@ input{
     margin-left: 95px;
     margin-right: 95px;
     font-weight: bold;
+  
     
   }
 

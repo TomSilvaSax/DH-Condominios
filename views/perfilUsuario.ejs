@@ -7,33 +7,13 @@
 </head>
 
 <body>
-    <header>
         <%- include("./partials/bordaSuperior") %>
 
-    </header>
+    
 <%//as informacoes serao recebidas pelo metodo Get//%>
 
-
-<div class="TelaCadastro">
-    <div class="TelaCadastroMenu">
-        <ul>
-            
-            <li><a href="">Gera Boletos</a></li>
-            <br>
-            <li><a href="">Anuncios Condominio</a></li>
-            <br>
-            <li><a href="">Reservar Área</a></li>
-            <br>
-            <li><a href=""></a></li>
-            <br>
-            <li><a href=""></a></li>
-            <br>
-            <li><a href=""></a></li>
-            <br>
-            <li><a href=""></a></li>
-            <br>
-          </ul>
-    </div>     
+<%- include("./partials/menuLateral") %>
+    
     <div id="main-container">
         <h1>Perfil Usuário</h1>
             <form id="register-form">
@@ -52,22 +32,17 @@
                 </div>
                 <div class="foto"></div>
             </form>
-                    
-
-
-                    
                 
             <div class="form">
                         <label for="Apartamento">Apartamento</label>
                         <div class="half-box">
-                            <input type="text" name="Apartamento" id="Apartamento" placeholder="Digite o Apartamento">
-                            <input type="text" name="Bloco" id="Bloco" placeholder="Digite o Bloco">
-                            <div class="butao">
-                                
+                            <input type="text" name="Apartamento" id="Apartamento" placeholder="AP">
+                            <input type="text" name="Bloco" id="Bloco" placeholder="BL">
+                              <div class="butao">
                                 <input type="button" id="Confirmar" value="Confirmar">
-                            </div>
+                              </div>
                         </div>
-                    </div>
+            </div>
             </form>
         <div class="obs">
             <label for="observação">Observação</label>

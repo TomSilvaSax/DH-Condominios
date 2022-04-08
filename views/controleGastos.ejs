@@ -8,31 +8,13 @@
     
   
 <body>
-    <header>
+    
         <%- include("./partials/bordaSuperior") %>
-    </header>
+    
 <%//as informacoes serao recebidas pelo metodo Get//%>
 
-<div class="TelaCadastro">
-        <div class="TelaCadastroMenu">
-            <ul>
-            
-                <li><a href="cadastro">Cadastro de Usuário</a></li>
-                <br>
-                <li><a href=""></a>Tela Contatos</li>
-                <br>
-                <li><a href="">Controle reserva</a></li>
-                <br>
-                <li><a href="">Anuncio Condominio</a></li>
-                <br>
-                <li><a href=""></a></li>
-                <br>
-                <li><a href=""></a></li>
-                <br>
-                <li><a href=""></a></li>
-                <br>
-              </ul>
-        </div>   
+<%- include("./partials/menuLateral") %>
+
     <div id="main-container">
         <h1>Cadastro de Gastos</h1>
         
@@ -42,6 +24,11 @@
                 <input type="email" name="usuario" id="usuario" placeholder="Digite o E-mail ou CPF do Usuário">
                 <label for="usuario">Nome Usuário</label>
                 <input type="email" name="usuario" id="usuario" placeholder="nome Usuário">
+                <br><br><br>
+                <nav class="valor">
+                <label for="Valor">Valor a pagar</label>
+                <input type="email" name="Valor" id="Valor" placeholder="$$">
+              </nav>
             </div>
                     
             <div class="form"> <% //utilizar metodo post do modulo 5 %>
@@ -62,13 +49,12 @@
                   <input type="text" name="taxa" id="taxa" placeholder="Digite o valor da Taxa do condominio">
                 </div>
             </div> 
-            <div class="valores">
-                <div class="total">
-                    <a href="">
-                </div>
-                <input type="button" id="salvar" value="salva">
-            </div>
+            
         </form>
+        <nav class="button">
+          <input type="button" id="salvar" value="salva">
+        </nav>
+      </div>
     </div>
           
 </div>
