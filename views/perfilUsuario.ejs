@@ -4,15 +4,41 @@
     <%- include("./partials/head") %>
     <title>Cadastro</title>
     <link rel="stylesheet" href="/stylesheets/stylePerfil.css" />
+    
 </head>
 
 <body>
         <%- include("./partials/bordaSuperior") %>
 
-    
-<%//as informacoes serao recebidas pelo metodo Get//%>
+         
+<div class="TelaCadastro">
+    <div class="TelaCadastroMenu">
+        <input id="hideMenu" type="radio" value="fecha" onClick="false"/>
+        
 
-<%- include("./partials/menuLateral") %>
+            <a href="">Gera Boletos</a>
+            <div class="separador"></div>
+            <a href="">Anuncios Condominio</a>
+            <div class="separador"></div>
+            <a href="">Reservar Área</a>
+            <div class="separador"></div>
+            <a href=""></a>
+            <div class="separador"></div>
+            <a href=""></a>
+            <div class="separador"></div>
+            <a href=""></a>
+            <div class="separador"></div>
+            <a href=""></a>
+            <div class="separador"></div>
+    </div> 
+    <div id="TelaCadastroOcultMenu">
+        <input id="showMenu" type="button" value="Exibir Menu" onClick="true" />
+      </div>
+        <div class="TelaCadastroOcultMenu"></div>
+    
+
+
+
     
     <div id="main-container">
         <h1>Perfil Usuário</h1>
@@ -30,7 +56,7 @@
                     <input type="email" name="email" id="email" placeholder="Digite o E-mail do Usuário">   
                     
                 </div>
-                <div class="foto"></div>
+                <div class="foto"></div> 
             </form>
                 
             <div class="form">
@@ -38,16 +64,21 @@
                         <div class="half-box">
                             <input type="text" name="Apartamento" id="Apartamento" placeholder="AP">
                             <input type="text" name="Bloco" id="Bloco" placeholder="BL">
-                              <div class="butao">
-                                <input type="button" id="Confirmar" value="Confirmar">
-                              </div>
+                              
                         </div>
             </div>
             </form>
         <div class="obs">
-            <label for="observação">Observação</label>
-                 <input type="text" name="Observação" size="120" maxlength="30">
+            <div>
+
+                <label for="observação">Observação</label>
+                <input type="text" name="Observação" size="120" maxlength="30">
+            </div>
+            
+                    <button class="butao" type="button" id="Confirmar" value="Confirmar">Confirmar</button>
+                  
         </div> 
+        
 </div>
 </div>           
 
