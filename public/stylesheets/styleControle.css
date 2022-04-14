@@ -241,7 +241,6 @@ input{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
     padding: 10px;
     min-width: 95%; 
     color: #fff;
@@ -253,14 +252,24 @@ input{
 
 .form {
     min-width: 50%; 
-    margin-right: 80px;
+    margin-right: 30px;
     text-align: start;
     color: #fff;
+    line-height: 35px;
     
+} 
+.form > input{
+  width: 100px;
+  font-size: 8px;
 }
+
 .formUsuario{
   min-width: 50%;
   margin-left: 20px;
+  line-height: 35px;
+}
+.valor{
+  margin-top: -70px;
 }
 
 .half-box{
@@ -292,6 +301,7 @@ div > input {
     font-weight: bold;
     background: linear-gradient(to right, #0408f7, #15a0e1);
     cursor: pointer;
+    margin-top: 0;
 
   transition: all 0.3s ease; 
 }

@@ -247,6 +247,7 @@ input{
     min-width: 30%; 
     color: #fff;
     border: none;
+    line-height: 35px;
   }
   #register-form input{
     border: none;
@@ -255,12 +256,12 @@ input{
 .form {
     margin: 20px;
     width: 50PX;
-    font-weight: bold;
     font-size: 20px; 
     margin-left:  80px;
     margin-right: 80px;
     text-align: center;
     color: #fff;
+    margin-top: 0;
     
 }
 
@@ -304,14 +305,11 @@ div > input {
     margin: 5px;
     margin-left: 95px;
     margin-right: 95px;
-    font-weight: bold;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 30px 30px;
-  
-    
   }
 
 
