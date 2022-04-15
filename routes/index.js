@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var indexController = require("../controllers/indexController")
+const indexController = require("../controllers/indexController")
+const auth = require('../middlewares/auth');
+const DhValidator = require('../middlewares/DhValidator');
+
 
 /* GET home page. */
 router.get('/', indexController.index);
@@ -13,7 +16,7 @@ router.get('/sobre', function(req, res){
     res.render('../views/sobre')
 });
 router.get('/perfil', function(req, res){
-    res.render('../views/perfilUsuario')
+    res.render( '../views/perfilUsuario')
 });
 
 router.get('/cadastro', function(req, res){
