@@ -2,21 +2,18 @@
 
 
 * {
-  border: 0;
-  outline: 0;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
 
 body {
   margin: 0;
+  height: 100%;
   font-family: "Nunito", sans-serif;
   color: black;
   display: flex;
   flex-direction: column;
- 
   background-color: rgba(17, 18, 18, 0.5);
 }
 header {
@@ -122,48 +119,51 @@ header nav ul li a:any-link {
 /*TELA LOGIM*/
 
 .sessao{
+  justify-content: space-around;
+  width: auto;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  min-width: 100%;
- min-height: 70%;
- padding: 40px;
- margin-top: 50px;
+  flex-wrap: wrap; /*JOGA TUDO PARA BAIXO*/
+  background-color: #fff;
+  align-items: center;
   
 
 }
 .imgSobre {
-  max-height: 100vh;
-  max-width: 70%;
+  height: 100%;
+  width: 40%;
   z-index: 1;
   margin-top: 0px;
+  
 }
 .imgSobre img{
-  max-height: 100vh;
+  max-width: 100%;
   max-width: 100%;
   z-index: 1;
   margin-top: 0px;
+  height: 100%;
+  
 }
 .servicos{
   min-width: 30%;
   font-size: 20px;
-  width: 20%;
-    height: 100vh;
-    
+  width: 50%;
+  height: 95%;
     margin-left: 60px;
     margin-right: 10px;
-    display: flex;
-    flex-direction: column;
+    margin-top: 115px;
+    margin-bottom: 115px;
     text-align: center;
     text-decoration: none;
     text-align: start;
     font-size: 15px;
-    color: #fff;
+    color: rgb(15, 14, 14);
     z-index: 1;
   }
 
 .rodape {
-  width: 100vw;
-  height: 90px;
+  width: 100%;
+  height: 70px;
   background-color: #238ecb;
   margin-bottom: 0;
   position: relative;

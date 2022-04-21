@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const multer = require('multer');
+const FileController = require('./controllers/FileController');
+const session = require('express-session');
 var methodOverride = require("method-override");
 
 const multerConfig = require('./config/multer');
@@ -18,6 +20,12 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+const uploadFile = multer({ storage: multerConfig});
+app.use(session({
+  secret: 'test',
+  resave: false,
+  saveUninitialized: true
+}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -27,6 +35,7 @@ app.use(methodOverride("_method"))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.post('/files', uploadFile.single('file'), FileController.storeFile);
 app.use((req, res)=>{
   return res.status(404).render('not-found')
 })
