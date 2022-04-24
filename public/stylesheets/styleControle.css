@@ -129,13 +129,25 @@ header nav ul li a:any-link {
     cursor: pointer;
     position: fixed;
     left: 12%;
+    margin-top: 20px;
+    color: #fff;
     
   }
-
-  .TelaCadastroOcultMenu botao-flutuante {
-  
-    cursor: pointer;
+  .TelaCadastroMenu i:hover{
+  color: #238ecb;
   }
+
+  .TelaCadastroOcultMenu i {
+    cursor: pointer;
+    position: fixed;
+    margin-top: 20px;
+    color: #fff;
+  }
+
+  .TelaCadastroOcultMenu i:hover{
+    color: #238ecb;
+    }
+    
   .TelaCadastroMenu {
 
     min-width: 15%;
@@ -144,6 +156,13 @@ header nav ul li a:any-link {
     text-decoration: none;
     list-style-type: none;
     margin-left: 0;
+    transition: left 0.5s linear;
+  }
+
+  .OculTelaCadastroMenu {
+    position: absolute;
+    left: -255px;
+    bottom: 0px; 
     transition: left 0.5s linear;
   }
   .TelaCadastroMenu a:any-link {
@@ -167,12 +186,7 @@ header nav ul li a:any-link {
     margin: 2px;
   }
 
-  botao-flutuante {
-    position: absolute;
-    left: -255px;
-    bottom: 0px; 
-    transition: left 0.5s linear;
-  }
+  
   
   /*Telas cadastro*/
   #main-container {

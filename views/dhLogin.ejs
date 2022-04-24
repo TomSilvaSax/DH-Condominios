@@ -14,23 +14,19 @@
         <nav class="login">
           <h1>Login</h1>
           <form class="menu" action="/login" method="post">
-            <label for="condominio">Condominío</label>
+            
 
-            <select name="condominio" id="condominio">
-              <option selected disabled>Selecione</option>
-              <option value="solarSim">Solar Sim</option>
-              <option value="solarMais">Solar Mais</option>
-              <option value="solarMenos">Solar Menos</option>
-            </select>
-
-            <label for="usuario">Usuário</label>
-
-            <input type="text" name="usuario" id="usuario" required />
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="" required />
 
             <label for="senha">Senha</label>
+            <input type="password" name="senha" id="" required />
 
-            <input type="password" name="senha" id="senha" required />
-            <br />
+            <nav class="logado">
+            <input type="checkbox" name="logado" id="">
+            <label for="">Manter logado?</label>
+          </nav>
+          <br>
             <button type="submit">Entrar</button>
             <p class="saudaçōes">Nossa Prioridade é morar bem!</p>
           </form>

@@ -99,13 +99,20 @@ input {
   height: 30px;
   border-radius: 15px 15px;
 }
-
+.logado{
+  font-size: 15px;
+  color: #fff;
+  margin: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
 .menu {
   display: flex;
   flex-direction: column;
   text-align: start;
   margin: 15px;
-  font-size: 25px;
+  font-size: 15px;
   color: black;
   position: relative;
   font-family: "Nunito", sans-serif;

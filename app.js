@@ -12,7 +12,11 @@ const multerConfig = require('./config/multer');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+
+
 const res = require('express/lib/response');
+var cookieMiddleware = require('./middlewares/cookieLogin')
 
 var app = express();
 
@@ -32,9 +36,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"))
+app.use(cookieMiddleware);
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+
+
 app.post('/files', uploadFile.single('file'), FileController.storeFile);
 app.use((req, res)=>{
   return res.status(404).render('not-found')
