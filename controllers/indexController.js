@@ -9,7 +9,7 @@ const controller = {
     index: function(req, res, next) { res.render('index', page);},
    
     registroFrom: (req, res,)=>{
-      res.render('cadastroUsuario')
+      res.render('cadastroUsuario',{ recMenu: req.session.recMenu, rota: "cadastro" })
          },
        salvarForm: (req, res)=>{
        // let listaDeErros = validationResult(req);
@@ -47,7 +47,7 @@ const controller = {
             };
               req.session.usuario = usuarioSalvo;
   
-                 res.redirect('perfil');
+                 res.redirect('perfil' ,{usuario:req.session.usuario});
   },
 
       }

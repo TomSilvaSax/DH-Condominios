@@ -1,10 +1,19 @@
-<div class="TelaCadastroMenu">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/stylesheets/menuLateral.css" />
 
-  <a href="rec-Menu" class="botao-flutuante">
+<link rel="icon" type='image/x-icon' href="/public/images/WhatsApp Image 2022-03-15 at 20.14.49.jpeg"/>
+
+<div class="<%=recMenu ? 'TelaCadastroMenu' : 'recMenu' %>">
+
+  <a href="rec-Menu/<%=rota %>" class="botao-flutuante">
     <i class="fa-solid fa-angles-left"></i>
   </a>
-
-
+  
 
   <a href="../controle">Gera Boletos</a>
   <div class="separador"></div>
@@ -23,7 +32,7 @@
 </div>
 <div class="TelaCadastroOcultMenu">
 
-  <a href="rec-Menu" class="botao-flutuante">
+  <a href="rec-Menu/<%=rota %>" class="botao-flutuante">
     <i class="fa-solid fa-angles-right"></i>
   </a>
 

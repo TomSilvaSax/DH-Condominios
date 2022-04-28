@@ -3,16 +3,16 @@ var router = express.Router();
 const indexController = require("../controllers/indexController")
 const auth = require('../middlewares/auth');
 const DhValidator = require('../middlewares/DhValidator');
-
+const cookieLogin = require('../middlewares/cookieLogin');
 
 /* GET home page. */
 
-router.get('/', function(req, res, next) {
-res.render('index',  { recMenu: req.session.recMenu });
+router.get('/',cookieLogin, function(req, res, next) {
+res.render('index',  );
 });
 router.get('/', indexController.index);
-router.get('/cadastro', indexController.registroFrom);
-router.post('/cadastro', indexController.salvarForm);
+router.get('/cadastro',cookieLogin, indexController.registroFrom);
+router.post('/cadastro',cookieLogin, indexController.salvarForm);
 
 router.get('/login', indexController.loginForm);
 router.post('/login', indexController.logarUsuario);
@@ -24,25 +24,26 @@ router.get('/login', function(req, res){
 router.get('/sobre', function(req, res){
     res.render('../views/sobre')
 });
-router.get('/perfil', function(req, res){
-    res.render( '../views/perfilUsuario')
+router.get('/perfil',cookieLogin, function(req, res){
+    res.render( '../views/perfilUsuario',{ recMenu: req.session.recMenu, rota: "perfil" })
 });
 
 //router.get('/cadastro', function(req, res){
    // res.render('../views/cadastroUsuario')
 //});
 
-router.get('/controle', auth, function(req, res){
-    res.render('../views/controleGastos')
+router.get('/controle', cookieLogin, function(req, res){
+    res.render('../views/controleGastos', { recMenu: req.session.recMenu, rota: "controle" } )
 });
 router.get('/servicos', function(req, res){
     res.render('../views/servicos')
 });
 
-router.get('/rec-Menu', (req, res) => {
+router.get('/rec-Menu/:rotas', (req, res) => {
     req.session.recMenu = !req.session.recMenu;
+    console.log(req.params)
    res.cookie('recMenu', req.session.recMenu);
-   res.redirect('/controle');
+   res.redirect('/' + req.params.rotas);
   });
 
   
