@@ -129,8 +129,21 @@ div > input {
   letter-spacing: 0.9px;
 
 }
-.obs{
+.CaixaText{
     margin: 5px;
+    margin-left: 95px;
+    margin-right: 95px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+   
+  }
+  
+  .obs{
+    
     margin-left: 95px;
     margin-right: 95px;
     color: #fff;
@@ -138,8 +151,8 @@ div > input {
     align-items: center;
     justify-content: space-between;
     border-radius: 30px 30px;
-  }
 
+  }
 
 .rodape {
   width: 100vw;

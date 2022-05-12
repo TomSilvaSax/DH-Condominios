@@ -10,6 +10,17 @@ const cookieLogin = require('../middlewares/cookieLogin');
 router.get('/',cookieLogin, function(req, res, next) {
 res.render('index',  );
 });
+
+router.get('/sair',cookieLogin, function(req, res, next) {
+    res.render('sair',  );
+    });
+router.get('/anuncios',cookieLogin, function(req, res, next) {
+   res.render('anuncios',  );
+    });
+    router.get('/reservas',cookieLogin, function(req, res){
+        res.render( '../views/reservas',{ recMenu: req.session.recMenu, rota: "reservas" })
+    });
+
 router.get('/', indexController.index);
 router.get('/cadastro',cookieLogin, indexController.registroFrom);
 router.post('/cadastro',cookieLogin, indexController.salvarForm);
