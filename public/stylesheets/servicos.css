@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   background-color: rgba(17, 18, 18, 0.5);
 }
-@media (min-width: 650px) {
+@media (min-width: 990px) {
   
   body {
     height: 100vh;
@@ -39,7 +39,7 @@ body {
 .sessao{
   justify-content: space-around;
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-wrap: wrap; /*JOGA TUDO PARA BAIXO*/
   background-color: #fff;
@@ -67,11 +67,9 @@ body {
   min-width: 30%;
   font-size: 20px;
   max-width:40%;
-  max-height: 50%;
+  
     margin-left: 60px;
     margin-right: 10px;
-    margin-top: 80px;
-    margin-bottom: 115px;
     text-align: center;
     text-decoration: none;
     text-align: start;

@@ -2,7 +2,7 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("legendaries", {
+    await queryInterface.createTable("Usuario", {
       id_Usuario: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -11,30 +11,25 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
       },
-      description: {
+      CPF: {
+        type: Sequelize.INTEGER,
+      },
+      Email: {
         type: Sequelize.STRING,
       },
-      type: {
+      Apartamento: {
+        type: Sequelize.INTEGER,
+      },
+      Bloco: {
+        type: Sequelize.INTEGER,
+      },
+      Observacao: {
         type: Sequelize.STRING,
       },
-      healthPoints: {
-        type: Sequelize.FLOAT,
+      Senha: {
+        type: Sequelize.STRING,
       },
-      specialAttack: {
-        type: Sequelize.FLOAT,
-      },
-      defense: {
-        type: Sequelize.FLOAT,
-      },
-      attack: {
-        type: Sequelize.FLOAT,
-      },
-      experience: {
-        type: Sequelize.FLOAT,
-      },
-      specialDefense: {
-        type: Sequelize.FLOAT,
-      },
+      
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
@@ -47,6 +42,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("legendaries");
+    await queryInterface.dropTable("Usuario");
   },
 };

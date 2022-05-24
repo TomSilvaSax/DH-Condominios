@@ -47,7 +47,7 @@ const controller = {
             };
               req.session.usuario = usuarioSalvo;
   
-                 res.redirect('perfil' ,{usuario:req.session.usuario});
+                 res.redirect('/perfil' ,{usuario:req.session.usuario});
   },
 
       }
