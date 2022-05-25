@@ -17,6 +17,21 @@ router.get('/sair',cookieLogin, function(req, res, next) {
 router.get('/anuncios',cookieLogin, function(req, res, next) {
    res.render('anuncios',  );
     });
+    router.get('/ValeIgapo',cookieLogin, function(req, res, next) {
+        res.render('ValeIgapo',  );
+         });
+         router.get('/JardinOliveiras',cookieLogin, function(req, res, next) {
+            res.render('JardinOliveiras',  );
+             });
+             router.get('/BoaVista',cookieLogin, function(req, res, next) {
+                res.render('BoaVista',  );
+                 });
+                 router.get('/AlphaVille',cookieLogin, function(req, res, next) {
+                    res.render('AlphaVille',  );
+                     });
+                     router.get('/GreenGraden',cookieLogin, function(req, res, next) {
+                        res.render('GreenGraden',  );
+                         });
     router.get('/reservas',cookieLogin, function(req, res){
         res.render( '../views/reservas',{ recMenu: req.session.recMenu, rota: "reservas" })
     });
