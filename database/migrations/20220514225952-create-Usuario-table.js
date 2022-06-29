@@ -9,25 +9,25 @@ module.exports = {
         autoIncrement: true,
       },
       name: {
-        type: Sequelize.STRING,
+        type: Sequelize.VARCHAR,
       },
       CPF: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.VARCHAR,
       },
       Email: {
-        type: Sequelize.STRING,
+        type: Sequelize.VARCHAR,
       },
       Apartamento: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.VARCHAR,
       },
       Bloco: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.VARCHAR,
       },
       Observacao: {
-        type: Sequelize.STRING,
+        type: Sequelize.VARCHAR,
       },
       Senha: {
-        type: Sequelize.STRING,
+        type: Sequelize.VARCHAR,
       },
       
       createdAt: {
