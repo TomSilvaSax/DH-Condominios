@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(5, 5, 5);
+}
+
+.titulo-reserva {
+    font-weight: bold;
+}
+
+.controle-reserva {
+    
+   margin-bottom: 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    align-items: center;
+ 
+}
+
+.controle-reserva > img {
+    margin-top: 40px;
+    
+    width: 35%;
+    height: 100%;
+}
+
+.link-informacoes-reserva {
+    font-weight: bold;
+    cursor: pointer;
+}
+

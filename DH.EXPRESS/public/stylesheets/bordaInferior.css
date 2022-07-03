@@ -1,0 +1,19 @@
+.rodape {
+    width: 100vw;
+    height: 90px;
+    background-color: #238ecb;
+    margin-bottom: 0;
+    z-index: 10;
+    box-shadow: 0px 5px 10px;
+  }
+  .redes-sociais {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 30px;
+    filter: grayscale(1);
+  
+  }
+
+ 
