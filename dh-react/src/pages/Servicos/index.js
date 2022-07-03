@@ -1,7 +1,7 @@
 import './App.css';
 import './servicos.css';
-import Header from "./components/Header"
-import Footer from './components/Footer';
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
 import fenseg from "./assets/fenseg.jpeg"
 
 

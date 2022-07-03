@@ -1,11 +1,11 @@
 import './App.css';
 import './anucios.css';
-import CaixaReserva1 from "./assets/imagem-caixa-reserva-1.jpg"
-import Header from "./components/Header"
-import Footer from './components/Footer';
+import CaixaReserva2 from "./assets/imagem-caixa-reserva-2.jpg"
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
 
 
-function Valelgapo() {
+function JardinOliveira() {
     return (
         <body>
 
@@ -13,7 +13,7 @@ function Valelgapo() {
             <div class="sessao">
 
                 <div class="imgSobre">
-                    <img src={CaixaReserva1} alt="imagem condominio" />
+                    <img src={CaixaReserva2} alt="imagem condominio" />
                 </div>
                 <div class="servicos">
 
@@ -43,4 +43,4 @@ function Valelgapo() {
     );
 }
 
-export default Valelgapo;
+export default JardinOliveira;

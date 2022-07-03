@@ -1,6 +1,6 @@
-import './App.css';
-import './Login.css';
-import Logo2 from './assets/logo2-removebg-preview.png';
+
+import '../../styles/Login.css';
+import Logo2 from '../../assets/logo2-removebg-preview.png';
 
 function Login() {
   return (

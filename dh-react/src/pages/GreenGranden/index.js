@@ -1,8 +1,8 @@
 import './App.css';
 import './anucios.css';
 import CaixaReserva5 from "./assets/imagem-caixa-reserva-5.jpg"
-import Header from "./components/Header"
-import Footer from './components/Footer';
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
 
 
 function GreenGraden() {

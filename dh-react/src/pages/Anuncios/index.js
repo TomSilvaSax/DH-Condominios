@@ -1,8 +1,8 @@
 import './App.css';
 import './anucios.css';
 import fenseg from "./assets/fenseg.jpeg"
-import Header from "./components/Header"
-import Footer from './components/Footer';
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
 
 
 function Anuncios() {

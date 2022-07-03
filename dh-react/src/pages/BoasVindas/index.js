@@ -1,19 +1,20 @@
 import './App.css';
 import './anucios.css';
-import CaixaReserva2 from "./assets/imagem-caixa-reserva-2.jpg"
-import Header from "./components/Header"
-import Footer from './components/Footer';
+import fenseg from "./assets/fenseg.jpeg"
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
 
 
-function JardinOliveira() {
+function BoasVindas() {
     return (
         <body>
 
             {Header}
+
             <div class="sessao">
 
                 <div class="imgSobre">
-                    <img src={CaixaReserva2} alt="imagem condominio" />
+                    <img src= {fenseg} alt="imagem condominio" />
                 </div>
                 <div class="servicos">
 
@@ -29,13 +30,11 @@ function JardinOliveira() {
                     <br></br>
                     <br></br>
                     <h2>Obrigado pela compreeção!</h2>
-                    <a href="reservas">
-                        <h1>Voltar </h1>
-                    </a>
 
 
                 </div>
             </div>
+
 
             {Footer}
 
@@ -43,4 +42,4 @@ function JardinOliveira() {
     );
 }
 
-export default JardinOliveira;
+export default BoasVindas;

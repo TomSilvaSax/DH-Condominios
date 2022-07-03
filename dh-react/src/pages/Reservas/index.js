@@ -1,8 +1,8 @@
 import './App.css';
 import './style-tela-controle-reserva.css';
-import Header from "./components/Header"
-import Footer from './components/Footer';
-import MenuLateral from "./components/MenuLateral"
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
+import MenuLateral from "../../components/MenuLateral"
 import CaixaReserva1 from "./assets/imagem-caixa-reserva-1.jpg"
 import CaixaReserva2 from "./assets/imagem-caixa-reserva-2.jpg"
 import CaixaReserva3 from "./assets/imagem-caixa-reserva-3.jpg"

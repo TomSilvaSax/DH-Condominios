@@ -1,5 +1,5 @@
 import './App.css';
-import './styles/anucios.css';
+import '../../styles/anucios.ccs';
 import CaixaReserva4 from "./assets/imagem-caixa-reserva-4.jpg"
 import Header from "./components/Header"
 import Footer from './components/Footer';

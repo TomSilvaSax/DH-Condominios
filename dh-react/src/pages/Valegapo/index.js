@@ -1,20 +1,19 @@
 import './App.css';
 import './anucios.css';
-import fenseg from "./assets/fenseg.jpeg"
-import Header from "./components/Header"
-import Footer from './components/Footer';
+import CaixaReserva1 from "./assets/imagem-caixa-reserva-1.jpg"
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
 
 
-function BoasVindas() {
+function Valelgapo() {
     return (
         <body>
 
             {Header}
-
             <div class="sessao">
 
                 <div class="imgSobre">
-                    <img src= {fenseg} alt="imagem condominio" />
+                    <img src={CaixaReserva1} alt="imagem condominio" />
                 </div>
                 <div class="servicos">
 
@@ -30,11 +29,13 @@ function BoasVindas() {
                     <br></br>
                     <br></br>
                     <h2>Obrigado pela compreeção!</h2>
+                    <a href="reservas">
+                        <h1>Voltar </h1>
+                    </a>
 
 
                 </div>
             </div>
-
 
             {Footer}
 
@@ -42,4 +43,4 @@ function BoasVindas() {
     );
 }
 
-export default BoasVindas;
+export default Valelgapo;

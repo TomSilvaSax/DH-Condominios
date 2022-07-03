@@ -1,8 +1,8 @@
 import './App.css';
 import './styleCadastro.ccs';
-import Header from "./components/Header"
-import Footer from './components/Footer';
-import MenuLateral from "./components/MenuLateral"
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
+import MenuLateral from "../../components/MenuLateral"
 
 
 function CadastroUsuario() {

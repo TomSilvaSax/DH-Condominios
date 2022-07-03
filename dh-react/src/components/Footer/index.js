@@ -1,8 +1,7 @@
-import './App.css';
-import facebook from "./assets/facebook.svg"
-import instagram from "./assets/instagram.svg"
-import linkedin from "./assets/linkedin.svg"
-import './footer.css';
+import facebook from '../../assets/facebook.svg'
+import instagram from '../../assets/instagram.svg'
+import linkedin from '../../assets/linkedin.svg'
+import '../../styles/footer.css';
 
 function Footer() {
 
