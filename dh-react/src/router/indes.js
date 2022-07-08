@@ -23,21 +23,22 @@ const dispatch = useDispatch();
 dispatch(signInRequest());
 
 return(
-<Switchs>
-    <Router exact path="/alphaVille" component={ AlphaVille } />
-    <Router exact path="/anuncios" component={ Anuncios } />
-    <Router exact path="/boasVindas" component={ BoasVindas } />
-    <Router exact path="/cadastroUsuario" component={ CadastroUsuario } />
-    <Router exact path="/controleGastos" component={ ControleGastos } />
-    <Router exact path="/jardinOliveira" component={ JardinOliveira } />
-    <Router exact path="/GreenGraden" component={ GreenGraden } />
-    <Router exact path="/PerfilUsuario" component={ PerfilUsuario } />
-    <Router exact path="/Reservas" component={ Reservas } />
-    <Router exact path="/Servicos" component={ Servicos } />
-    <Router exact path="/Valegopo" component={ Valegopo } />
-    <Router exact path="/" component={ Login } />
-
-</Switchs>
+<BrowserRouter>
+<Routes>
+    <Route exact path="/alphaVille" component={ <AlphaVille /> } />
+    <Route exact path="/anuncios" component={ <Anuncios /> } />
+    <Route exact path="/boasVindas" component={ <BoasVindas /> } />
+    <Route exact path="/cadastroUsuario" component={ <CadastroUsuario /> } />
+    <Route exact path="/controleGastos" component={ <ControleGastos /> } />
+    <Route exact path="/jardinOliveira" component={ <JardinOliveira /> } />
+    <Route exact path="/GreenGraden" component={ <GreenGraden /> } />
+    <Route exact path="/PerfilUsuario" component={ <PerfilUsuario /> } />
+    <Route exact path="/Reservas" component={ <Reservas /> } />
+    <Route exact path="/Servicos" component={ <Servicos /> } />
+    <Route exact path="/Valegopo" component={ <Valegopo /> } />
+    <Route exact path="/" component={ <Login /> } />
+    </Routes>
+</BrowserRouter>
 
 );
 }

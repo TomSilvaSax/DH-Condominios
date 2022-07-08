@@ -1,5 +1,5 @@
-import './App.css';
-
+import '../../App.css';
+import '../../styles/menuLateral.css';
 
 
 function MenuLateral() {
@@ -7,9 +7,9 @@ function MenuLateral() {
     return (
 
         <>
-        <div class="">
+        <div class="TelaCadastroMenu">
 
-        <a href="" class="botao-flutuante">
+        <a href="" class="">
           <i class="fa-solid fa-angles-left"></i>
         </a>
         

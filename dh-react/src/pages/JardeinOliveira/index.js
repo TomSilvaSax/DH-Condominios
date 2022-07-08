@@ -1,6 +1,6 @@
-import './App.css';
-import './anucios.css';
-import CaixaReserva2 from "./assets/imagem-caixa-reserva-2.jpg"
+import '../../App.css';
+import '../../styles/anucios.css';
+import CaixaReserva2 from "../../assets/imagem-caixa-reserva-2.jpg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
 
@@ -9,7 +9,7 @@ function JardinOliveira() {
     return (
         <body>
 
-            {Header}
+            {<Header/>}
             <div class="sessao">
 
                 <div class="imgSobre">
@@ -37,7 +37,7 @@ function JardinOliveira() {
                 </div>
             </div>
 
-            {Footer}
+            {<Footer/>}
 
         </body>
     );

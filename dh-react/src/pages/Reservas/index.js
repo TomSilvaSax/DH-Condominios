@@ -1,20 +1,20 @@
-import './App.css';
-import './style-tela-controle-reserva.css';
+import '../../App.css';
+import '../../styles/style-tela-controle-reserva.css';
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
 import MenuLateral from "../../components/MenuLateral"
-import CaixaReserva1 from "./assets/imagem-caixa-reserva-1.jpg"
-import CaixaReserva2 from "./assets/imagem-caixa-reserva-2.jpg"
-import CaixaReserva3 from "./assets/imagem-caixa-reserva-3.jpg"
-import CaixaReserva4 from "./assets/imagem-caixa-reserva-4.jpg"
-import CaixaReserva5 from "./assets/imagem-caixa-reserva-5.jpg"
+import CaixaReserva1 from "../../assets/imagem-caixa-reserva-1.jpg"
+import CaixaReserva2 from "../../assets/imagem-caixa-reserva-2.jpg"
+import CaixaReserva3 from "../../assets/imagem-caixa-reserva-3.jpg"
+import CaixaReserva4 from "../../assets/imagem-caixa-reserva-4.jpg"
+import CaixaReserva5 from "../../assets/imagem-caixa-reserva-5.jpg"
 
 
 function Reservas() {
     return (
         <body>
 
-            {Header}
+            {<Header/>}
 
             <div class="TelaCadastro">
                 {MenuLateral}
@@ -55,7 +55,7 @@ function Reservas() {
                             <a href="GreenGraden" class="link-informacoes-reserva">Ver mais informações</a>
             </div>
 
-                        {Footer}
+                        {<Footer/>}
 
                     </body >
                     );

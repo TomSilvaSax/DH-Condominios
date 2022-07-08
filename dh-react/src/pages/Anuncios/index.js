@@ -1,6 +1,6 @@
-import './App.css';
-import './anucios.css';
-import fenseg from "./assets/fenseg.jpeg"
+import '../../App.css';
+import '../../styles/anucios.css';
+import fenseg from "../../assets/fenseg.jpeg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
 
@@ -9,7 +9,7 @@ function Anuncios() {
     return (
         <body>
 
-            {Header}
+            {<Header/>}
 
             <div class="sessao">
 
@@ -36,7 +36,7 @@ function Anuncios() {
             </div>
 
 
-            {Footer}
+            {<Footer/>}
 
         </body>
     );

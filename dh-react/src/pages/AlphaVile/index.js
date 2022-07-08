@@ -1,15 +1,15 @@
-import './App.css';
-import '../../styles/anucios.ccs';
-import CaixaReserva4 from "./assets/imagem-caixa-reserva-4.jpg"
-import Header from "./components/Header"
-import Footer from './components/Footer';
+import '../../App.css';
+import '../../styles/anucios.css';
+import CaixaReserva4 from "../../assets/imagem-caixa-reserva-4.jpg"
+import Header from "../../components/Header"
+import Footer from '../../components/Footer';
 
 
 function AlphaVille() {
     return (
         <body>
 
-            {Header}
+            {<Header/>}
             <div class="sessao">
 
                 <div class="imgSobre">
@@ -37,7 +37,7 @@ function AlphaVille() {
                 </div>
             </div>
 
-            {Footer}
+            {<Footer/>}
 
         </body>
     );

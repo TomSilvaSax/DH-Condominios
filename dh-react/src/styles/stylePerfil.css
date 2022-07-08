@@ -9,7 +9,7 @@
 body {
 
   font-family: "Nunito", sans-serif;
-  background: url("/images/areaLazer.png") no-repeat center center fixed;
+  background: url("../assets/areaLazer.png") no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;

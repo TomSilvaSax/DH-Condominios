@@ -1,8 +1,8 @@
-import './App.css';
-import './servicos.css';
+import '../../App.css';
+import '../../styles/servicos.css';
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
-import fenseg from "./assets/fenseg.jpeg"
+import fenseg from "../../assets/fenseg.jpeg"
 
 
 
@@ -10,7 +10,7 @@ function Servicos() {
     return (
         <body>
 
-            {Header}
+            {<Header/>}
 
             <div class="sessao">
 
@@ -51,7 +51,7 @@ function Servicos() {
                 </div>
             </div>
 
-            {Footer}
+            {<Footer/>}
 
         </body >
     );

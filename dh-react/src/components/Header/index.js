@@ -1,8 +1,8 @@
-import './App.css';
-import Logo2r from "./assets/logo2-removebg-preview.png"
-import IconeUsuario from "./assets/Icone-usuario-Png-1024x1024.png"
-import ImgMenu from "./assets/menu.png"
-import "./header.css"
+import '../../App.css';
+import Logo2r from "../../assets/logo2-removebg-preview.png"
+import IconeUsuario from "../../assets/Icone-usuario-Png-1024x1024.png"
+import ImgMenu from "../../assets/menu.png"
+import "../../styles/header.css"
 
 
 function Header() {
@@ -17,9 +17,9 @@ function Header() {
 
             <nav class="menu-superior">
                 <ul>
-                    <li><a href="sobre">Sobre</a></li>
-                    <li><a href="/servicos">Serviços</a></li>
-                    <li><a href="/sair">Sair</a></li>
+                    <li><a href={<sobre />}>Sobre</a></li>
+                    <li><a href = {"" }>Serviços</a></li>
+                    <li><a href={<sair />}>Sair</a></li>
                 </ul>
 
                 <div class="usuario">

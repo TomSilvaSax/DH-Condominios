@@ -1,43 +1,42 @@
-import '../../app.css';
-import Pikachu from './assets/pikachu.svg';
-import Pokebola from './assets/pokebola.svg';
-import Header from './components/Header';
+import './App.css';
+import {BrowserRouter, Route, Routes, Redirect, Navigate} from 'react-router-dom';
 
-function App() {
+import AlphaVille from "../src/pages/AlphaVile";
+import Anuncios from "../src/pages/Anuncios";
+import BoasVindas from '../src/pages/BoasVindas';
+import CadastroUsuario from "../src/pages/CadastroUsuario";
+import ControleGastos from '../src/pages/ControleGastos' ;
+import GreenGraden from '../src/pages/GreenGranden';
+import JardinOliveira from "../src/pages/JardeinOliveira"
+import Login from "../src/pages/Login"
+import PerfilUsuario from "../src/pages/PerfilUsuario"
+import Reservas from "../src/pages/Reservas"
+import Servicos from "../src/pages/Servicos"
+import Valegopo from "../src/pages/Valegapo"
+
+
+function App() { 
   return (
-    <>
-      <Header />
-      <main className="">
-        <img src={Pikachu} alt="Pikachu" />
-        <div>
-          <h1>
-            <strong>Find</strong> all your favorite <strong>Pokemon</strong>
-          </h1>
-          <p>
-            You can know the type of Pokemon, its strengths, disadvantages and
-            abilities
-          </p>
-          <a className="link-pokemons">See pokemons</a>
-        </div>
-        <a href="dark-mode" className="botao-flutuante">
-          <img src={Pokebola} alt="Pokebola"/>
-        </a>
-      </main>
-    </>
+    <BrowserRouter>
+<Routes>
+    <Route path="/alphaVille" exact element={ <AlphaVille /> } />
+    <Route  path="/anuncios" exact element={ <Anuncios /> } />
+    <Route  path="/boasVindas" exact element={ <BoasVindas /> } />
+    <Route  path="/cadastroUsuario" exact element={ <CadastroUsuario /> } />
+    <Route  path="/controleGastos" exact element={ <ControleGastos /> } />
+    <Route  path="/jardinOliveira" exact element={ <JardinOliveira /> } />
+    <Route  path="/GreenGraden" exact element={ <GreenGraden /> } />
+    <Route  path="/PerfilUsuario" exact element={ <PerfilUsuario /> } />
+    <Route  path="/Reservas" exact element={ <Reservas /> } />
+    <Route  path="/Servicos" exact element={ <Servicos /> } />
+    <Route  path="/Valegopo" exact element={ <Valegopo /> } />
+
+    <Route  path="/" exact element={ <Login /> } />
+    <Route path="*" element={<Navigate to="/" /> }/>
+    </Routes>
+</BrowserRouter>
+
   );
 }
 
-export default  function App( ) {
-
-  <Provider store={store} >
-     <PersistGate persistor = {persistor}>
-       <ThemeProvider theme={theme}>
-         <Router history={history}>
-            <ToastConainer />
-             <ScrollTop />
-             <Routes/>
-             </Router>
-       </ThemeProvider>
-     </PersistGate>
-  </Provider>
-};
+export default App;

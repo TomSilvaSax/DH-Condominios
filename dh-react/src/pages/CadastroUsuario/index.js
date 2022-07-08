@@ -1,5 +1,5 @@
-import './App.css';
-import './styleCadastro.ccs';
+import '../../App.css';
+import '../../styles/styleCadastro.css';
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
 import MenuLateral from "../../components/MenuLateral"
@@ -9,7 +9,7 @@ function CadastroUsuario() {
     return (
         <body>
 
-            {Header}
+            {<Header/>}
 
             <div class="TelaCadastro">
                 {MenuLateral}
@@ -48,7 +48,7 @@ function CadastroUsuario() {
             </div>
 
 
-            {Footer}
+            {<Footer/>}
 
         </body>
     );
