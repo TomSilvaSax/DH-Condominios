@@ -1,5 +1,4 @@
-import '../../App.css';
-import '../../styles/anucios.css';
+import '../../styles/detalhesEmp.css';
 import CaixaReserva2 from "../../assets/imagem-caixa-reserva-2.jpg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
@@ -7,15 +6,16 @@ import Footer from '../../components/Footer';
 
 function JardinOliveira() {
     return (
-        <body>
+        <div class='detalhe'>
 
-            {<Header/>}
-            <div class="sessao">
+            {<Header />}
+            <div class="sessao_detalhe">
 
-                <div class="imgSobre">
+                <div class="imgSobre_detalhe">
+                    <p>Bem Vindo ao Jardim Oliveira </p>
                     <img src={CaixaReserva2} alt="imagem condominio" />
                 </div>
-                <div class="servicos">
+                <div class="servicos_detalhe">
 
                     <h1> Anuncios</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quaerat adipisci blanditiis, numquam
@@ -37,9 +37,9 @@ function JardinOliveira() {
                 </div>
             </div>
 
-            {<Footer/>}
+            {<Footer />}
 
-        </body>
+        </div>
     );
 }
 

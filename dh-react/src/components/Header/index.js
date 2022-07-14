@@ -1,8 +1,9 @@
-import '../../App.css';
 import Logo2r from "../../assets/logo2-removebg-preview.png"
 import IconeUsuario from "../../assets/Icone-usuario-Png-1024x1024.png"
 import ImgMenu from "../../assets/menu.png"
 import "../../styles/header.css"
+import {  Link } from 'react-router-dom';
+
 
 
 function Header() {
@@ -17,13 +18,13 @@ function Header() {
 
             <nav class="menu-superior">
                 <ul>
-                    <li><a href={<sobre />}>Sobre</a></li>
-                    <li><a href = {"" }>Serviços</a></li>
-                    <li><a href={<sair />}>Sair</a></li>
+                    <li><Link to="/sobre">Sobre</Link></li>
+                    <li><Link to="/servicos">Serviços</Link></li>
+                    <li><Link to="/sair">Sair</Link></li>
                 </ul>
 
                 <div class="usuario">
-                    <a href="perfil">Olá </a>
+                    <Link to="/PerfilUsuario">Olá </Link>
                     <div class="fotousuario">
                         <img src={IconeUsuario} alt="menu" />
                     </div>
@@ -40,4 +41,3 @@ function Header() {
 }
 
 export default Header;
-

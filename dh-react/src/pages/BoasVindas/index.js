@@ -1,5 +1,4 @@
-
-import '../../styles/anucios.css';
+import '../../styles/detalhesEmp.css';
 import fenseg from "../../assets/fenseg.jpeg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
@@ -7,16 +6,16 @@ import Footer from '../../components/Footer';
 
 function BoasVindas() {
     return (
-        <body>
+        <div class='detalhe'>
 
-            {<Header/>}
+            {<Header />}
 
-            <div class="sessao">
+            <div class="sessao_detalhe">
 
-                <div class="imgSobre">
-                    <img src= {fenseg} alt="imagem condominio" />
+                <div class="imgSobre_detalhe">
+                    <img src={fenseg} alt="imagem condominio" />
                 </div>
-                <div class="servicos">
+                <div class="servicos_detalhe">
 
                     <h1> Anuncios</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quaerat adipisci blanditiis, numquam
@@ -38,7 +37,7 @@ function BoasVindas() {
 
             {<Footer />}
 
-        </body>
+        </div>
     );
 }
 

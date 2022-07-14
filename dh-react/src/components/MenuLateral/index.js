@@ -1,38 +1,40 @@
 import '../../App.css';
 import '../../styles/menuLateral.css';
+import {  Link } from 'react-router-dom';
 
 
 function MenuLateral() {
-
+  
+  
     return (
 
         <>
         <div class="TelaCadastroMenu">
 
         <a href="" class="">
-          <i class="fa-solid fa-angles-left"></i>
+        <ion-icon name="chevron-back-outline"></ion-icon>
         </a>
         
       
-        <a href="../controle">Gera Boletos</a>
+        <Link to="/controleGastos">Gera Boletos</Link>
         <div class="separador"></div>
-        <a href="../anuncios">Anuncios Condominio</a>
+        <Link to="/anuncios">Anuncios Condominio</Link>
         <div class="separador"></div>
-        <a href="../reservas">Reservar Área</a>
+        <Link to="/reservas">Reservar Área</Link>
         <div class="separador"></div>
-        <a href=""></a>
+        <Link to=""></Link>
         <div class="separador"></div>
-        <a href=""></a>
+        <Link to=""></Link>
         <div class="separador"></div>
-        <a href=""></a>
+        <Link to=""></Link>
         <div class="separador"></div>
-        <a href=""></a>
-        <div class="separador"></div>
+        <Link to=""></Link>
+        <div to="separador"></div>
       </div>
       <div class="TelaCadastroOcultMenu">
       
         <a href="rec-Menu/<%=rota %>" class="botao-flutuante">
-          <i class="fa-solid fa-angles-right"></i>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
         </a>
 </div>
 </>

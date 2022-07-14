@@ -7,7 +7,7 @@ function Footer() {
         <footer  class="rodape">
         <ul class="redes-sociais">
           <li><a href="#">
-            <img src= {''} alt="icone facebook" width="50px"/>
+            <img src= {"Facebook"} alt="icone facebook" width="50px"/>
           </a></li>
           <li><a href="#">
             <img src= {'instagram'} alt="icone instagram" width="50px"/>

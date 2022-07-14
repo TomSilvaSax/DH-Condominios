@@ -6,7 +6,7 @@
   font-family: "Nunito", sans-serif;
 }
 
-body {
+.perfil {
 
   font-family: "Nunito", sans-serif;
   background: url("../assets/areaLazer.png") no-repeat center center fixed;
@@ -17,7 +17,7 @@ body {
   
 }
 
-  .TelaCadastro{
+  .TelaCadastro-perfil{
     height: 100vh;
     max-width: 100%;
     display: flex;
@@ -27,7 +27,7 @@ body {
  
   /*Telas cadastro*/
 
-  #main-container {
+  #main-container-perfil {
     background-color: rgba(17, 18, 18, 0.5);
     border-radius: 60px 60px;
     z-index: 1;
@@ -42,7 +42,7 @@ body {
    
 }
 
-#main-container h1 {
+#main-container-perfil h1 {
   text-align: center;
   font-size: 30px;
   margin-top: 10px;
@@ -50,7 +50,7 @@ body {
   color: #ffff;
   
 }
-.ajuste-foto{
+.ajuste-foto-perfil{
     max-width: 50%;
     max-height: 50%;
     width: 150px;
@@ -60,7 +60,7 @@ body {
     display: flex;
     flex-direction: column; 
   }
-.foto input{
+.foto-perfil input{
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -78,7 +78,7 @@ input{
     padding: 15px;
 }
 
-#register-form{
+#register-form-perfil{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,7 +87,7 @@ input{
     min-width: 30%; 
   }
 
-  .formUsuario {
+  .formUsuario-perfil {
    
     margin-left: 20px;
     color: #fff;
@@ -98,7 +98,7 @@ input{
     
 }
 
-.form {
+.form-perfil {
     margin: 20px;
     width: 50PX;
     font-size: 20px; 
@@ -110,12 +110,12 @@ input{
     
 }
 
-.half-box{
+.half-box-perfil{
   display: flex;
   justify-content: space-between;
   
 }
-.half-box input{
+.half-box-perfil input{
   
   text-align: center;
   padding: 5px;
@@ -128,7 +128,7 @@ div > input {
     padding: 10px;
     border: none; 
 }
-.butao{
+.butao-perfil{
     
   width: 32px auto;
   color: #fff;
@@ -141,12 +141,12 @@ div > input {
   transition: all 0.3s ease; 
 }
 
-.butao:hover{
+.butao-perfil:hover{
   background: linear-gradient(to right,  #15a0e1, #e2e2ef);
   letter-spacing: 0.9px;
 
 }
-.obs{
+.obs-perfil{
     margin: 5px;
     margin-left: 30px;
     margin-right: 95px;

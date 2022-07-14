@@ -12,7 +12,7 @@ import Login from "../src/pages/Login"
 import PerfilUsuario from "../src/pages/PerfilUsuario"
 import Reservas from "../src/pages/Reservas"
 import Servicos from "../src/pages/Servicos"
-import Valegopo from "../src/pages/Valegapo"
+import Valeigapo from "../src/pages/Valeigapo"
 
 
 function App() { 
@@ -29,7 +29,7 @@ function App() {
     <Route  path="/PerfilUsuario" exact element={ <PerfilUsuario /> } />
     <Route  path="/Reservas" exact element={ <Reservas /> } />
     <Route  path="/Servicos" exact element={ <Servicos /> } />
-    <Route  path="/Valegopo" exact element={ <Valegopo /> } />
+    <Route  path="/Valeigapo" exact element={ <Valeigapo /> } />
 
     <Route  path="/" exact element={ <Login /> } />
     <Route path="*" element={<Navigate to="/" /> }/>

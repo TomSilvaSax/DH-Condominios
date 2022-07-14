@@ -1,21 +1,24 @@
-import '../../App.css';
-import '../../styles/anucios.css';
+import '../../styles/detalhesEmp.css';
 import CaixaReserva4 from "../../assets/imagem-caixa-reserva-4.jpg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 
 
 function AlphaVille() {
     return (
-        <body>
+        <div class='detalhe'>
 
-            {<Header/>}
-            <div class="sessao">
+            {<Header />}
 
-                <div class="imgSobre">
+
+            <div class="sessao_detalhe">
+
+                <div class="imgSobre_detalhe">
+                    <p>Bem Vindo ao Alpha Vile</p>
                     <img src={CaixaReserva4} alt="imagem condominio" />
                 </div>
-                <div class="servicos">
+                <div class="servicos_detalhe">
 
                     <h1> Anuncios</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quaerat adipisci blanditiis, numquam
@@ -25,21 +28,19 @@ function AlphaVille() {
                         distinctio dolores culpa et non neque possimus nam libero doloribus iste adipisci, itaque, sint
                         nihil excepturi officia. Eos?</p>
 
-
-                    <br></br>
                     <br></br>
                     <h2>Obrigado pela compreeção!</h2>
-                    <a href="reservas">
+                    <Link to={'/reservas'}>
                         <h1>Voltar </h1>
-                    </a>
+                    </Link>
 
 
                 </div>
             </div>
 
-            {<Footer/>}
+            {<Footer />}
 
-        </body>
+        </div>
     );
 }
 

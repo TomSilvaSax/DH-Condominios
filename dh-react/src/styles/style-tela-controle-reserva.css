@@ -8,27 +8,29 @@
 }
 
 p {
-    font-size: 20px;
-    color: rgb(5, 5, 5);
+    font-size: 30px;
+    color: rgb(15, 16, 17)
 }
 
 .titulo-reserva {
     font-weight: bold;
+    color: aliceblue;
+    font-size: 40PX;
 }
 
-.controle-reserva {
-    
-   margin-bottom: 40px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+.controle-reserva  {
+
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
- 
+    color: aliceblue;
+
 }
 
-.controle-reserva > img {
+.controle-reserva>img {
     margin-top: 40px;
-    
     width: 35%;
     height: 100%;
 }
@@ -36,5 +38,24 @@ p {
 .link-informacoes-reserva {
     font-weight: bold;
     cursor: pointer;
+    Text-decoration: none;
+    color: rgb(10, 10, 10);
+    background:  rgb(226, 243, 243);
+    border-radius: 30PX;
+   
+    
 }
 
+.reserva{
+    margin: 0;
+    width: 100%;
+    font-family: "Nunito", sans-serif;
+    color: black;
+    background: url("../assets/areaLazer.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+    

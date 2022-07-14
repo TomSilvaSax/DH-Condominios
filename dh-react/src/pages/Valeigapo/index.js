@@ -1,21 +1,23 @@
-import '../../App.css';
-import '../../styles/anucios.css';
+import '../../styles/detalhesEmp.css';
 import CaixaReserva1 from "../../assets/imagem-caixa-reserva-1.jpg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
 
 
-function Valelgapo() {
+function Valeigapo() {
     return (
-        <body>
+        <div class='detalhe'>
 
-            {<Header/>}
-            <div class="sessao">
+            {<Header />}
+            <div class="sessao_detalhe">
 
-                <div class="imgSobre">
+                <div class="imgSobre_detalhe">
+
+                    <p>Bem Vindo ao Vale do Igapo</p>
+
                     <img src={CaixaReserva1} alt="imagem condominio" />
                 </div>
-                <div class="servicos">
+                <div class="servicos_detalhe">
 
                     <h1> Anuncios</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quaerat adipisci blanditiis, numquam
@@ -37,10 +39,10 @@ function Valelgapo() {
                 </div>
             </div>
 
-            {<Footer/>}
+            {<Footer />}
 
-        </body>
+        </div>
     );
 }
 
-export default Valelgapo;
+export default Valeigapo;

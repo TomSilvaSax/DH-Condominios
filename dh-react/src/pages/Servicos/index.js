@@ -4,14 +4,10 @@ import Header from "../../components/Header"
 import Footer from '../../components/Footer';
 import fenseg from "../../assets/fenseg.jpeg"
 
-
-
 function Servicos() {
     return (
-        <body>
-
-            {<Header/>}
-
+        <div class='servicos'>
+            <Header />
             <div class="sessao">
 
                 <div class="imgSobre">
@@ -29,13 +25,13 @@ function Servicos() {
                         contratação exigiria taxa extra.</p>
                     <p> Nesse último seriam 2 etapas de aprovação (na mesma AG):</p>
                     <br></br>
-                        <ul style="list-style:none">
-                            <li>1o) Aprovação (ou não) de contratação do serviço; </li>
-                            <li>2o) Aprovação (ou não) da taxa extra e seu valor.</li>
+                    <ul style="list-style:none">
+                        <li>1o) Aprovação (ou não) de contratação do serviço; </li>
+                        <li>2o) Aprovação (ou não) da taxa extra e seu valor.</li>
 
-                        </ul>
-                        <br></br>
-                        <p>
+                    </ul>
+                    <br></br>
+                    <p>
                         Pode-se ter o caso da necessidade e contratação do serviço ser aprovada/reconhecida, porém o valor não
                         ser adequado para o bolso do condomínio/condôminos. Daí retorna-se a mesa de negociação e/ou busca-se
                         outro fornecedor.
@@ -51,9 +47,9 @@ function Servicos() {
                 </div>
             </div>
 
-            {<Footer/>}
+            <Footer />
 
-        </body >
+        </div >
     );
 }
 

@@ -7,7 +7,7 @@
   font-family: "Nunito", sans-serif;
 }
 
-body {
+.cadastro {
 
   font-family: "Nunito", sans-serif;
   background: url("../../src/assets/areaLazer.png") no-repeat center  fixed;
@@ -21,23 +21,29 @@ body {
 }
   .TelaCadastro{
     height: 100vh;
-    display: flex;
+  
     margin-right: 20px;
 
 }
 
   /*Telas cadastro*/
+
+  .formUsuario{
+
+align-items: center;
+
+
+  }
+
   #main-container {
     background-color: rgba(17, 18, 18, 0.5);
     border-radius: 60px 60px;
     z-index: 1;
     height: 90%;
-    width: 70%;
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    margin-left:  13%;
-    margin-right: 10%; 
+
     margin-top: 20px;
    
 }
@@ -78,6 +84,7 @@ input{
     border: none;
     line-height: 35px;
   }
+
   #register-form input{
     border: none;
   }
@@ -91,6 +98,7 @@ input{
     text-align: center;
     color: #fff;
     margin-top: 0;
+    display: flex;
     
 }
 
@@ -121,7 +129,6 @@ div > input {
   font-weight: bold;
   background: linear-gradient(to right, #e2e2ef, #15a0e1);
   cursor: pointer;
-
   transition: all 0.3s ease; 
 }
 
@@ -139,7 +146,6 @@ div > input {
     align-items: center;
     justify-content: space-between;
     
-   
   }
   
   .obs{

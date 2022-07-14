@@ -1,20 +1,20 @@
-import '../../App.css';
 import '../../styles/anucios.css';
 import fenseg from "../../assets/fenseg.jpeg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
 
 
+
 function Anuncios() {
     return (
-        <body>
+        <div class="anuncios">
 
-            {<Header/>}
+            <Header />
 
-            <div class="sessao">
+            <div class="sessao-anuncios">
 
                 <div class="imgSobre">
-                    <img src= {fenseg} alt="imagem condominio" />
+                    <img src={fenseg} alt="imagem condominio" />
                 </div>
                 <div class="servicos">
 
@@ -36,9 +36,9 @@ function Anuncios() {
             </div>
 
 
-            {<Footer/>}
+            <Footer />
 
-        </body>
+        </div>
     );
 }
 
