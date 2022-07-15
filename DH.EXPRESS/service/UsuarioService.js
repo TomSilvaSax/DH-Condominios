@@ -1,4 +1,4 @@
-// const database = require("../database/models");
+const database = require("../database/models");
 
 const UsuarioService = {
     ListUsuario: async () => {

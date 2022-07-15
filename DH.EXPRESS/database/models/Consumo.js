@@ -1,38 +1,37 @@
-module.exports = (sequelize, dataType) => 
-{
+module.exports = (sequelize, dataType) => {
 
   const Consumo = sequelize.define('Consumo', {
     id_consumo: {
-      type: dataTypex.INTEGER,
+      type: dataType.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     Data_Leitura: {
-      type: Sequelize.DATE,
+      type: dataType.DATE,
     },
 
     Consumo: {
-      type: Sequelize.FOLAT,
+      type: dataType.FLOAT,
     },
 
     Leitura_Inicial: {
-      type: Sequelize.DATE,
+      type: dataType.DATE,
     },
 
     Leitura_Final: {
-      type: Sequelize.DATE,
+      type: dataType.DATE,
     },
 
     id_tipo_consumo: {
-      type: Sequelize.INTEGER,
+      type: dataType.INTEGER,
       primaryKey: true,
-      autoIncrement: true,
+      
     },
 
     id_usuario: {
-      type: Sequelize.INTEGER,
+      type: dataType.INTEGER,
       primaryKey: true,
-      autoIncrement: true,
+     
     }
   }, {
     tableName: "Consumo",

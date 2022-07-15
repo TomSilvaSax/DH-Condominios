@@ -2,21 +2,21 @@ module.exports = (sequelize, dataType) => {
 
   const Fatura = sequelize.define('Fatura', {
     id_fatura: {
-      type: Sequelize.INTEGER,
+      type: dataType.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
 
     Vencimento: {
-      type: Sequelize.DATE,
+      type: dataType.DATE,
     },
 
     Multa_Atraso: {
-      type: Sequelize.FLOAT,
+      type: dataType.FLOAT,
     },
 
     Valor: {
-      type: Sequelize.FLOAT,
+      type: dataType.FLOAT,
     },
 
   },
@@ -37,8 +37,8 @@ module.exports = (sequelize, dataType) => {
     })
   };
 
+  return Fatura;
 }
 
 
 
-return Fatura;

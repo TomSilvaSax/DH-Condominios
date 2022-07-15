@@ -17,13 +17,16 @@ const controller = {
   indexUsuario: async (request, response) => {  
     const { name } = request.query;
 
+    
     const Usuario = await UsuarioService.ListUsuario(name);
+   
  
     return response.json(Usuario)
   },           
 
-  indexById: async (req, res) => {
-    const { id } = res.params
+  indexById: async (request, response) => {
+    console.log("response.params:", response.params)
+    const { id } = response.params
 
     const Usuario = await UsuarioService.getUsuarioById(id);
     return res.json(Usuario)
@@ -43,7 +46,7 @@ const controller = {
     let senhaC = bcrypt.hashSync('12345678', 10)
 
 
-    let usuario = await UsurioService ({ nome, CPF, email, Apartamento, Bloco, senha: senhaC, Observação })
+    let usuario = await UsuarioService({ nome, CPF, email, Apartamento, Bloco, senha: senhaC, Observação })
     res.send('Usuario cadastrado com sucesso!')
     return response.json(usuario);
 

@@ -2,23 +2,23 @@ module.exports = (sequelize, dataType)=> {
 
     const Valores_Taxas = sequelize.define('Valores_Taxas', {
         id_valores_taxas: {
-            type: Sequelize.INTEGER,
+            type: dataType.INTEGER,
             primaryKey: true,
             autoIncrement: true,
           },
           
           Taxa_Condominio: {
-            type: Sequelize.FLOAT,
+            type: dataType.STRING,
           },
     
           Taxa_M3: {
-            type: Sequelize.FLOAT,
+            type: dataType.STRING,
           },
           
           id_tipo_consumo: {
-            type: Sequelize.LONG,
+            type: dataType.STRING,
             primaryKey: true,
-            autoIncrement: true,
+           
         }
     }, {
       tableName: "Valores_Taxas",
@@ -32,6 +32,6 @@ module.exports = (sequelize, dataType)=> {
         otherKey: 'id_tipo_consumo'
     });
 };
+return Valores_Taxas;
 }
 
-return Valores_Taxas;

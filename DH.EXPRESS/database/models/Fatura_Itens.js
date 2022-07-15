@@ -2,33 +2,33 @@ module.exports = (sequelize, dataType)=> {
 
     const Fatura_Itens = sequelize.define('Fatura_Itens', {
         id_fatura_itens: {
-            type: Sequelize.INTEGER,
+            type: dataType.INTEGER,
             primaryKey: true,
             autoIncrement: true,
           },
           
           Valor_Item: {
-            type: Sequelize.FLOAT,
+            type: dataType.FLOAT,
           },
           
           Multa_Atraso: {
-            type: Sequelize.FLOAT,
+            type: dataType.FLOAT,
           },
     
           Valor: {
-            type: Sequelize.FLOAT,
+            type: dataType.FLOAT,
           },
     
           id_tipo_consumo: {
-            type: Sequelize.LONG,
+            type: dataType.INTEGER,
             primaryKey: true,
-            autoIncrement: true,
+          
           },
     
           id_fatura: {
-            type: Sequelize.LONG,
+            type: dataType.INTEGER,
             primaryKey: true,
-            autoIncrement: true,
+           
         },
         
     },
@@ -46,6 +46,6 @@ module.exports = (sequelize, dataType)=> {
         otherKey: 'id_fatura'
         });
     };
+    return Fatura_Itens;
 }
 
-return Fatura_Itens;

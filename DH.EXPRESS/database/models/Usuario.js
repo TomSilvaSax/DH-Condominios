@@ -2,38 +2,38 @@ module.exports = (sequelize, dataType) => {
 
   const Usuario = sequelize.define('Usuario', {
     id_usuario: {
-      type: Sequelize.INTEGER,
+      type: dataType.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     name: {
-      type: Sequelize.VARCHAR,
+      type: dataType.STRING,
     },
     CPF: {
-      type: Sequelize.VARCHAR,
+      type: dataType.STRING,
     },
     Email: {
-      type: Sequelize.VARCHAR,
+      type: dataType.STRING,
     },
     Apartamento: {
-      type: Sequelize.VARCHAR,
+      type: dataType.STRING,
     },
     Bloco: {
-      type: Sequelize.VARCHAR,
+      type: dataType.STRING,
     },
     Observacao: {
-      type: Sequelize.VARCHAR,
+      type: dataType.STRING,
     },
     Senha: {
-      type: Sequelize.VARCHAR,
+      type: dataType.STRING,
     },
 
     createdAt: {
-      type: Sequelize.DATE,
+      type: dataType.DATE,
       allowNull: false,
     },
     updatedAt: {
-      type: Sequelize.DATE,
+      type: dataType.DATE,
       allowNull: false,
     }
   }, {
@@ -54,6 +54,7 @@ module.exports = (sequelize, dataType) => {
       otherKey: 'id_fatura'
     });
   };
+
+  return Usuario;
 }
 
-return Usuario;

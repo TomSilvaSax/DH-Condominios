@@ -2,13 +2,13 @@ module.exports = (sequelize, dataType) => {
 
   const Tipo_Consumo = sequelize.define('Tipo_Consumo', {
     id_tipo_consumo: {
-      type: Sequelize.INTEGER,
+      type: dataType.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
 
     Descricao: {
-      type: Sequelize.STRING,
+      type: dataType.STRING,
     }
   }, {
     tableName: "Tipo_Consumo",
@@ -28,8 +28,9 @@ module.exports = (sequelize, dataType) => {
     })
   };
 
+  return Tipo_Consumo;
+
 }
 
 
 
-return Tipo_Consumo;
