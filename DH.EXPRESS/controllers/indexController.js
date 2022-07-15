@@ -3,25 +3,53 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const fs = require('fs')
 
+const UsuarioService = require('../service/UsuarioService')
+
 
 let usuariosjson = path.join('usuarios.json')
 const controller = {
+
+  indexAll: async (request, response) => {
+    const Usuario = await UsuarioService.ListUsuario();
+    return response.json(Usuario);
+  },
+
+  indexUsuario: async (request, response) => {  
+    const { name } = request.query;
+
+    const Usuario = await UsuarioService.ListUsuario(name);
+ 
+    return response.json(Usuario)
+  },           
+
+  indexById: async (req, res) => {
+    const { id } = res.params
+
+    const Usuario = await UsuarioService.getUsuarioById(id);
+    return res.json(Usuario)
+  },
+
   index: function (req, res, next) { res.render('index', page); },
 
-  registroFrom: (req, res,) => {
+  registroFrom: async (req, res,) => {
     res.render('cadastroUsuario', { recMenu: req.session.recMenu, rota: "cadastro" })
   },
-  salvarForm: (req, res) => {
-    // let listaDeErros = validationResult(req);
 
-    //if(listaDeErros.isEmpty()){
+  
+  salvarForm: async (req, res) => {
+    
     let { nome, CPF, email, Apartamento, Bloco, Observação } = req.body;
     let { files } = req;
     let senhaC = bcrypt.hashSync('12345678', 10)
-    let usuario = JSON.stringify({ nome, CPF, email, Apartamento, Bloco, senha: senhaC, Observação })
 
-    fs.writeFileSync(usuariosjson, usuario)
+
+    let usuario = await UsurioService ({ nome, CPF, email, Apartamento, Bloco, senha: senhaC, Observação })
     res.send('Usuario cadastrado com sucesso!')
+    return response.json(usuario);
+
+    // fs.writeFileSync(usuariosjson, usuario)
+
+    
     // } else {
     //  res.render('cadastroUsuario', {erros:listaDeErros})
     //    }
@@ -31,7 +59,7 @@ const controller = {
     res.render('dhLogin')
   },
 
-  logarUsuario: (req, res) => {
+  logarUsuario: async (req, res) => {
 
     let { email, senha, logado } = req.body;
     let usuarioSalvo = fs.readFileSync(usuariosjson, { encoding: 'utf-8' });

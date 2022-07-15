@@ -1,5 +1,8 @@
 
 import '../../styles/footer.css';
+import facebook from '../../assets/facebook.png'
+import instagram from '../../assets/instagram.png'
+import linkedin from '../../assets/linkedin.png'
 
 function Footer() {
 
@@ -7,13 +10,13 @@ function Footer() {
         <footer  class="rodape">
         <ul class="redes-sociais">
           <li><a href="#">
-            <img src= {"Facebook"} alt="icone facebook" width="50px"/>
+            <img src= {facebook} alt="icone facebook" width="50px"/>
           </a></li>
           <li><a href="#">
-            <img src= {'instagram'} alt="icone instagram" width="50px"/>
+            <img src= {instagram} alt="icone instagram" width="50px"/>
           </a></li>
           <li><a href="#">
-            <img src= {'linkedin'} alt="icone linkedin" width="50px"/>
+            <img src= {linkedin} alt="icone linkedin" width="50px"/>
           </a></li>
           </ul>
         

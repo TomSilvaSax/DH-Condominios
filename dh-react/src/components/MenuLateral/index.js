@@ -1,21 +1,16 @@
 import '../../App.css';
 import '../../styles/menuLateral.css';
-import {  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 function MenuLateral() {
-  
-  
-    return (
 
-        <>
-        <div class="TelaCadastroMenu">
 
-        <a href="" class="">
-        <ion-icon name="chevron-back-outline"></ion-icon>
-        </a>
-        
-      
+  return (
+
+    <>
+      <div class="TelaCadastroMenu">
         <Link to="/controleGastos">Gera Boletos</Link>
         <div class="separador"></div>
         <Link to="/anuncios">Anuncios Condominio</Link>
@@ -32,13 +27,9 @@ function MenuLateral() {
         <div to="separador"></div>
       </div>
       <div class="TelaCadastroOcultMenu">
-      
-        <a href="rec-Menu/<%=rota %>" class="botao-flutuante">
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-</div>
-</>
-    )
+      </div>
+    </>
+  )
 }
 
 export default MenuLateral;

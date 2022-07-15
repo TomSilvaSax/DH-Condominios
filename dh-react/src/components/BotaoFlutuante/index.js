@@ -1,7 +1,7 @@
 import '../../styles/footer.css';
 import '../../styles/botaoFlutuante.css'
-import AbriMenu from '../../assets/chevron-back-outline.svg'
-import FachaMenu from '../../assets/chevron-forward-outline.svg'
+import AbriMenu from '../../assets/chevron-back-outline.png'
+import FachaMenu from '../../assets/chevron-forward-outline.png'
 import {useState} from 'react';
 import MenuLateral from "../../components/MenuLateral"
 
@@ -18,10 +18,9 @@ function BotaoFlutuante({onClick}) {
         <> 
      <a className='botao-flutuante' onClick={onClick}>
 
-
          <img src={darkMode? {AbriMenu}:{FachaMenu} } alt='botao'></img>
 
-
+         
      </a>
 
            {darkMode ? <MenuLateral /> : ""}
