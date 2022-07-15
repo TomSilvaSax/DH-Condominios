@@ -3,7 +3,8 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const fs = require('fs')
 
-const UsuarioService = require('../service/UsuarioService')
+const UsuarioService = require('../service/UsuarioService');
+const { resourceLimits } = require('worker_threads');
 
 
 let usuariosjson = path.join('usuarios.json')
@@ -16,71 +17,115 @@ const controller = {
 
   indexUsuario: async (request, response) => {  
     const { name } = request.query;
-
-    
     const Usuario = await UsuarioService.ListUsuario(name);
-   
- 
     return response.json(Usuario)
   },           
 
+  // indexByCpf: async (request, response) => {
+  //   console.log("response.params:", response.params)
+  //   const { CPF } = request.params
+
+  //   const Usuario = await UsuarioService.getindexByCpf(CPF);
+  //   return response.json(Usuario)
+  // },     
+
   indexById: async (request, response) => {
     console.log("response.params:", response.params)
-    const { id } = response.params
+    const { id } = request.params
 
     const Usuario = await UsuarioService.getUsuarioById(id);
-    return res.json(Usuario)
+    return response.json(Usuario)
   },
 
-  index: function (req, res, next) { res.render('index', page); },
+  index: function (request, response, next) { response.render('index', page); },
 
-  registroFrom: async (req, res,) => {
-    res.render('cadastroUsuario', { recMenu: req.session.recMenu, rota: "cadastro" })
+  registroFrom: async (request, response,) => {
+    response.render('cadastroUsuario', { recMenu: request.session.recMenu, rota: "cadastro" })
   },
 
   
-  salvarForm: async (req, res) => {
-    
-    let { nome, CPF, email, Apartamento, Bloco, Observação } = req.body;
-    let { files } = req;
-    let senhaC = bcrypt.hashSync('12345678', 10)
+  // salvarForm: async (req, res) => {
 
+  
+  // bcrypt.hash('12345678', 10 , (errBcrypt, hash) => {
+  //   if(errBcrypt) { return res.status(500).send({error: errBcrypt})}
 
-    let usuario = await UsuarioService({ nome, CPF, email, Apartamento, Bloco, senha: senhaC, Observação })
-    res.send('Usuario cadastrado com sucesso!')
-    return response.json(usuario);
+  //   conn.query(
+  //     "INSERT INTO Usuario ( nome, CPF, email, Apartamento, Bloco, hash, Observacao    )",
+  //     [ req.body.nome,
+  //       req.body.CPF,
+  //       req.body.email,
+  //       req.body.Apartamento,
+  //       req.body.bloco,
+  //       hash,
+  //       req.body.Observacao
+  //     ],
+  //     (error, result) => {
+  //       conn.releasa();
+  //       if(error) { return res.status(500).send({ error: error }) }
+  //       response = {
+  //         mensagem: "Usuario cadastrato com sucesso",
+  //         usuarioCriado: {
+  //           id_usuario: resourceLimits.isertId,
+  //           Nome: req.body.nome,
+  //           Email: req.body.email,
+  //         }
+  //       }
+  //     }
+  //   )
+  // })
+  // },
+  salvarForm: async (request, response) => {
 
-    // fs.writeFileSync(usuariosjson, usuario)
+    let { files } = request;
+     bcrypt.hashSync('12345678', 10)
+      const {
+        name, 
+        CPF, 
+        email, 
+        Apartamento, 
+        Bloco, 
+        senha,
+        Observacao
+      } = request.body
+  
+      const Usuario = await UsuarioService.createUsuario(
+       
+        name, 
+        CPF, 
+        email, 
+        Apartamento, 
+        Bloco, 
+        senha,
+        Observacao,
+      )
+  
+      return response.json(Usuario);
+    },
+  
 
-    
-    // } else {
-    //  res.render('cadastroUsuario', {erros:listaDeErros})
-    //    }
+  loginForm: (request, response) => {
+    response.render('dhLogin')
   },
 
-  loginForm: (req, res) => {
-    res.render('dhLogin')
-  },
+  logarUsuario: async (request, response) => {
 
-  logarUsuario: async (req, res) => {
-
-    let { email, senha, logado } = req.body;
+    let { email, senha, logado } = request.body;
     let usuarioSalvo = fs.readFileSync(usuariosjson, { encoding: 'utf-8' });
     usuarioSalvo = JSON.parse(usuarioSalvo);
 
     if (email != usuarioSalvo.email) {
-      return res.send('Usuario invalido!')
+      return response.send('Usuario invalido!')
     }
     if (!bcrypt.compareSync(senha, usuarioSalvo.senha)) {
-      return res.send('Senha invalida!')
+      return response.send('Senha invalida!')
     }
     if (logado != undefined) {
-      res.cookie('logado', usuarioSalvo.email, { maxAge: 20400 })
+      response.cookie('logado', usuarioSalvo.email, { maxAge: 20400 })
     };
-    req.session.usuario = usuarioSalvo;
+    request.session.usuario = usuarioSalvo;
 
-    res.redirect('/perfil');
-
+    response.redirect('/perfil');
 
   },
 

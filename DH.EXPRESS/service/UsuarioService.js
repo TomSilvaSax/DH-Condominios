@@ -30,19 +30,20 @@ const UsuarioService = {
         Email,
         Apartamento,
         Bloco,
-        Observacao,
-        Senha
+        Senha,
+        Observacao
+        
 
     ) => {
         const newUsuario = await database.Usuario.create({
             name,
-            description,
             CPF,
             Email,
             Apartamento,
             Bloco,
-            Observacao,
-            Senha
+            Senha,
+            Observacao
+            
         });
 
         return newUsuario;
