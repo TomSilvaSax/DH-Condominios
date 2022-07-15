@@ -1,8 +1,9 @@
-module.exports = (sequelize, dataType) => {
+module.exports = (sequelize, dataType) => 
+{
 
   const Consumo = sequelize.define('Consumo', {
     id_consumo: {
-      type: Sequelize.INTEGER,
+      type: dataTypex.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -54,7 +55,7 @@ module.exports = (sequelize, dataType) => {
       otherKey: 'id_fatura_itens'
     })
   };
+  return Consumo;
 
 }
 
-return Consumo;
