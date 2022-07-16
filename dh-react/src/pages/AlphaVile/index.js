@@ -30,7 +30,7 @@ function AlphaVille() {
 
                     <br></br>
                     <h2>Obrigado pela compreeção!</h2>
-                    <Link to={'/reservas'}>
+                    <Link to={'/Empreendimentos'}>
                         <h1>Voltar </h1>
                     </Link>
 

@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import Fenseg from "../../assets/fenseg.jpeg"
 
 
-function Sobre() {
+function SobreDh() {
     return (
         <body>
 
@@ -55,4 +55,4 @@ function Sobre() {
     );
 }
 
-export default Sobre;
+export default SobreDh;

@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import BotaoAbriFecha from '../../components/BotaoFlutuante'
 import api from '../../services/api';
 
-function ControleGastos() {
+function GerarBoleto() {
 
     //useEffect(() => {
     // async function loadGastos() {
@@ -27,7 +27,7 @@ function ControleGastos() {
                 <BotaoAbriFecha />
 
                 <div id="main-container">
-                    <h1>Cadastro de Gastos</h1>
+                    <h1>Gera Boleto</h1>
 
                     <form id="register-form" action="" method="post">
                         <div class="formUsuario">
@@ -68,4 +68,4 @@ function ControleGastos() {
     );
 }
 
-export default ControleGastos;
+export default GerarBoleto;

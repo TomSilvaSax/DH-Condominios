@@ -21,7 +21,7 @@ function Reservas() {
             </div>
             <div class="controle-reserva">
                 <br></br>
-                <p class="titulo-reserva">Controle de Reservas</p>
+                <p class="titulo-reserva">Conheça nossos Empreendimentos</p>
                 <img src={CaixaReserva1} alt="foto do primeiro condominio" />
                 <br></br>
                 <br></br>
@@ -40,7 +40,7 @@ function Reservas() {
 
                 <p>Condomínio Boa Vista</p>
                 <br></br>
-                <Link to="/BoaVista" class="link-informacoes-reserva">Ver mais informações</Link>
+                <Link to="/boaVista" class="link-informacoes-reserva">Ver mais informações</Link>
                 <img src={CaixaReserva4} alt="foto do primeiro condominio" />
                 <br></br>
                 <br></br>

@@ -10,14 +10,66 @@ const { resourceLimits } = require('worker_threads');
 let usuariosjson = path.join('usuarios.json')
 const controller = {
 
+  // Retorna Pagina
+  index: function (request, response, next) { response.render('index', page); },
+
+  //Cria Usuario
+  salvarUsuario: async (request, response) => {
+
+    let { files } = request;
+     bcrypt.hashSync('12345678', 10)
+      const {
+        name, 
+        CPF, 
+        email, 
+        Apartamento, 
+        Bloco, 
+        senha,
+        Observacao
+      } = request.body
+  
+      const Usuario = await UsuarioService.createUsuario(
+       
+        name, 
+        CPF, 
+        email, 
+        Apartamento, 
+        Bloco, 
+        senha,
+        Observacao,
+      )
+  
+      return response.json(Usuario);
+    },
+  
+//Lista todos Usuarios
   indexAll: async (request, response) => {
     const Usuario = await UsuarioService.ListUsuario();
     return response.json(Usuario);
   },
 
-  indexUsuario: async (request, response) => {  
-    const { name } = request.query;
-    const Usuario = await UsuarioService.ListUsuario(name);
+ //Busca Usuario pelo Id
+  indexById: async (request, response) => {
+    console.log("response.params:", response.params)
+    const { id } = request.params
+
+    const Usuario = await UsuarioService.getUsuarioById(id);
+    return response.json(Usuario)
+  },
+
+  indexNome: async (request, response) => {
+    
+    const { name } = request.query
+
+    const Usuario = await UsuarioService.getUsuarioByNome(name);
+    return response.json(Usuario)
+  },
+
+
+  indexUsuarioCPF: async (request, response) => {  
+    
+    const { CPF } = request.query
+    const Usuario = await UsuarioService.ListUsuarioCPF(CPF);
     return response.json(Usuario)
   },           
 
@@ -29,20 +81,10 @@ const controller = {
   //   return response.json(Usuario)
   // },     
 
-  indexById: async (request, response) => {
-    console.log("response.params:", response.params)
-    const { id } = request.params
+  
+  
 
-    const Usuario = await UsuarioService.getUsuarioById(id);
-    return response.json(Usuario)
-  },
-
-  index: function (request, response, next) { response.render('index', page); },
-
-  registroFrom: async (request, response,) => {
-    response.render('cadastroUsuario', { recMenu: request.session.recMenu, rota: "cadastro" })
-  },
-
+ 
   
   // salvarForm: async (req, res) => {
 
@@ -75,33 +117,6 @@ const controller = {
   //   )
   // })
   // },
-  salvarForm: async (request, response) => {
-
-    let { files } = request;
-     bcrypt.hashSync('12345678', 10)
-      const {
-        name, 
-        CPF, 
-        email, 
-        Apartamento, 
-        Bloco, 
-        senha,
-        Observacao
-      } = request.body
-  
-      const Usuario = await UsuarioService.createUsuario(
-       
-        name, 
-        CPF, 
-        email, 
-        Apartamento, 
-        Bloco, 
-        senha,
-        Observacao,
-      )
-  
-      return response.json(Usuario);
-    },
   
 
   loginForm: (request, response) => {

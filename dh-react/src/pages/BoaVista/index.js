@@ -1,21 +1,22 @@
 import '../../styles/detalhesEmp.css';
-import CaixaReserva1 from "../../assets/imagem-caixa-reserva-1.jpg"
+import CaixaReserva3 from "../../assets/imagem-caixa-reserva-3.jpg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
 
-function Valeigapo() {
+
+function BoaVista() {
     return (
         <div class='detalhe'>
 
             {<Header />}
+
+
             <div class="sessao_detalhe">
 
                 <div class="imgSobre_detalhe">
-
-                    <p>Bem Vindo ao Vale do Igapo</p>
-
-                    <img src={CaixaReserva1} alt="imagem condominio" />
+                    <p>Bem Vindo ao Boa Vista</p>
+                    <img src={CaixaReserva3} alt="imagem condominio" />
                 </div>
                 <div class="servicos_detalhe">
 
@@ -27,8 +28,6 @@ function Valeigapo() {
                         distinctio dolores culpa et non neque possimus nam libero doloribus iste adipisci, itaque, sint
                         nihil excepturi officia. Eos?</p>
 
-
-                    <br></br>
                     <br></br>
                     <h2>Obrigado pela compreeção!</h2>
                     <Link to={'/Empreendimentos'}>
@@ -45,4 +44,4 @@ function Valeigapo() {
     );
 }
 
-export default Valeigapo;
+export default BoaVista;

@@ -1,14 +1,11 @@
 .botao-flutuante {
     position: fixed;
-  
-    width: 64px;
-    height: 64px;
     transition: all 1s;
     cursor: pointer;
   }
   
   .botao-flutuante > img {
-    width: 100%;
+    width: 20px;
   }
   
   .botao-flutuante:hover {

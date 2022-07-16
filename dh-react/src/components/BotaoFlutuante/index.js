@@ -18,8 +18,8 @@ function BotaoFlutuante({onClick}) {
         <> 
      <a className='botao-flutuante' onClick={onClick}>
 
-         <img src={darkMode? {AbriMenu}:{FachaMenu} } alt='botao'></img>
-
+         {darkMode? (<img src={AbriMenu} alt='botao'></img>):(<img src={FachaMenu} alt='botao'></img>) } 
+         
          
      </a>
 

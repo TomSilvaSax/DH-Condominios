@@ -36,11 +36,12 @@ router.get('/reservas', cookieLogin, function (req, res) {
 });
 
 router.get('/', indexController.index);
-router.get('/cadastro', cookieLogin, indexController.registroFrom);
-router.post('/cadastro', cookieLogin, indexController.salvarForm);
-router.get('/all', cookieLogin, indexController.indexAll);
-router.get('/:id', cookieLogin, indexController.indexById);
-router.get('/nome/:id', cookieLogin, indexController.indexUsuario);
+router.post('/cadastro', cookieLogin, indexController.salvarUsuario);
+// router.post('/cadastrogastos', cookieLogin, indexController.salvarGastos);
+router.get('/list', cookieLogin, indexController.indexAll);
+router.get('/cadastro/:id', cookieLogin, indexController.indexById);
+router.get('/nome', indexController.indexNome);
+router.get('/CPF', cookieLogin, indexController.indexUsuarioCPF);
 
 router.get('/login', indexController.loginForm);
 router.post('/login', indexController.logarUsuario);

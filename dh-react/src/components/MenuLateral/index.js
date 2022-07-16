@@ -11,15 +11,15 @@ function MenuLateral() {
 
     <>
       <div class="TelaCadastroMenu">
-        <Link to="/controleGastos">Gera Boletos</Link>
+        <Link to="/cadastroUsuario">Cadastra Usuario</Link>
         <div class="separador"></div>
         <Link to="/anuncios">Anuncios Condominio</Link>
         <div class="separador"></div>
-        <Link to="/reservas">Reservar Área</Link>
+        <Link to="/Empreendimentos">Empreendimentos</Link>
         <div class="separador"></div>
-        <Link to=""></Link>
+        <Link to="/gerarboleto">Gerar Boleto</Link>
         <div class="separador"></div>
-        <Link to=""></Link>
+        <Link to="/cadastragastos">Cadastra Gastos</Link>
         <div class="separador"></div>
         <Link to=""></Link>
         <div class="separador"></div>

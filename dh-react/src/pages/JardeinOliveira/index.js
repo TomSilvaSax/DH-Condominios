@@ -2,7 +2,7 @@ import '../../styles/detalhesEmp.css';
 import CaixaReserva2 from "../../assets/imagem-caixa-reserva-2.jpg"
 import Header from "../../components/Header"
 import Footer from '../../components/Footer';
-
+import { Link } from 'react-router-dom';
 
 function JardinOliveira() {
     return (
@@ -29,9 +29,9 @@ function JardinOliveira() {
                     <br></br>
                     <br></br>
                     <h2>Obrigado pela compreeção!</h2>
-                    <a href="reservas">
+                    <Link to={'/Empreendimentos'}>
                         <h1>Voltar </h1>
-                    </a>
+                    </Link>
 
 
                 </div>

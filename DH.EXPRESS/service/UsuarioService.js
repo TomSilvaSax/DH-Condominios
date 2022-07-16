@@ -5,12 +5,12 @@ const UsuarioService = {
         const Usuario = await database.Usuario.findAll();
         return Usuario;
     },
-    ListUsuarioData: async (UsuarioName) => {
+    getUsuarioByNome: async (Usuarioname) => {
         // Fazer um find usando Sequelize com WHERE name = pokemonName
         // return pokemon;
         const Usuario = await database.Usuario.findOne({
             where: {
-                name: UsuarioName
+                name: Usuarioname
             }
         });
         return Usuario;
@@ -24,13 +24,23 @@ const UsuarioService = {
 
     },
 
+    ListUsuarioCPF: async (UsuarioCPF) => {
+
+        const Usuario = await database.Usuario.findOne({
+            where: {
+                CPF: UsuarioCPF
+            }
+        });
+        return Usuario;
+
+    },
     createUsuario: async (
         name,
         CPF,
         Email,
         Apartamento,
         Bloco,
-        Senha,
+        Senha = bcrypt.hash('12345678', 10),
         Observacao
         
 
@@ -41,7 +51,7 @@ const UsuarioService = {
             Email,
             Apartamento,
             Bloco,
-            Senha,
+            Senha ,
             Observacao
             
         });
