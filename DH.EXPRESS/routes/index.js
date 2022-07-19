@@ -3,6 +3,7 @@ var router = express.Router();
 const indexController = require("../controllers/indexController")
 const auth = require('../middlewares/auth');
 const cookieLogin = require('../middlewares/cookieLogin');
+const UsuarioService = require('../service/UsuarioService');
 
 /* GET home page. */
 
@@ -37,6 +38,7 @@ router.get('/reservas', cookieLogin, function (req, res) {
 
 router.get('/', indexController.index);
 router.post('/cadastro', cookieLogin, indexController.salvarUsuario);
+router.get('/cadastro', cookieLogin, indexController.registroFrom);
 // router.post('/cadastrogastos', cookieLogin, indexController.salvarGastos);
 router.get('/list', cookieLogin, indexController.indexAll);
 router.get('/cadastro/:id', cookieLogin, indexController.indexById);

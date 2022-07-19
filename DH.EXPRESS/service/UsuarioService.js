@@ -1,4 +1,6 @@
 const database = require("../database/models");
+const bcrypt = require('bcrypt');
+const fs = require('fs')
 
 const UsuarioService = {
     ListUsuario: async () => {
@@ -6,8 +8,7 @@ const UsuarioService = {
         return Usuario;
     },
     getUsuarioByNome: async (Usuarioname) => {
-        // Fazer um find usando Sequelize com WHERE name = pokemonName
-        // return pokemon;
+        
         const Usuario = await database.Usuario.findOne({
             where: {
                 name: Usuarioname
@@ -34,30 +35,53 @@ const UsuarioService = {
         return Usuario;
 
     },
+
     createUsuario: async (
         name,
         CPF,
         Email,
         Apartamento,
         Bloco,
-        Senha = bcrypt.hash('12345678', 10),
+        Senha,
         Observacao
-        
+
 
     ) => {
-        const newUsuario = await database.Usuario.create({
-            name,
-            CPF,
-            Email,
-            Apartamento,
-            Bloco,
-            Senha ,
-            Observacao
-            
-        });
+        const newUsuario = await database.Usuario.create(
+            {
+                name,
+                CPF,
+                Email,
+                Apartamento,
+                Bloco,
+                Senha,
+                Observacao
+            });
+
+        // const novoUsuario = new usuario({
+        //     name: req.body.name,
+        //     CPF: req.body.cpf,
+        //     Email: req.body.Email,
+        //     Apartamento: req.body.Apartamento,
+        //     Bloco: req.body.Bloco,
+        //     Senha: req.body.Senha,
+        //     Observacao: req.body.Observacao
+
+        // })
+        // bcrypt.genSalt(10, (erro, salt) => {
+
+        //     bcrypt.hash('12345678', salt, (erro, hash) => {
+        //         if (erro) {
+        //             req.flash('error_msg', "Houve um erro ao salvar senha")
+        //             res.redirect('/cadastro')
+        //         }
+        //         novoUsuario.Senha = hash
+        //     })
+        // })
 
         return newUsuario;
     }
 }
 
 module.exports = UsuarioService;
+

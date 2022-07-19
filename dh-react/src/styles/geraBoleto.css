@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.geraBoleto {
+
+  font-family: "Nunito", sans-serif;
+  background: url("../../src/assets/areaLazer.png") no-repeat center  fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  
+}
+  .TelacadastroBoleto{
+    height: 100vh;
+  
+    margin-right: 20px;
+
+}
+
+  /*Telas cadastro*/
+
+
+  #main-container-cadastroBoleto {
+    background-color: rgba(17, 18, 18, 0.5);
+    border-radius: 60px 60px;
+    z-index: 1;
+    height: 90%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+   
+}
+
+#main-container-cadastroBoleto h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    min-width: 80%;
+    color: #ffff;
+    
+}
+ 
+input{
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 20px 20px;
+    padding: 15px;
+}
+
+#register-form-cadastroBoleto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 50px;
+    padding: 10px;
+    min-width: 30%; 
+    color: #fff;
+    border: none;
+    line-height: 35px;
+  }
+
+  #register-form-cadastroBoleto input{
+    border: none;
+  }
+
+  .formBoleto {
+    display: flex;
+    justify-content: space-between;
+  }
+.form-cadastroGasto {
+    margin: 20px;
+    width: 50PX;
+    font-size: 20px; 
+    margin-left:  80px;
+    margin-right: 80px;
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+    display: flex;
+    
+}
+
+.half-box-cadastroBoleto {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.half-box-cadastroBoleto input{
+  
+  text-align: center;
+  padding: 5px;
+  width: 80px;
+  height: 30px;
+}
+
+div > input {
+    width:  30vw;
+    padding: 10px;
+    border: none; 
+}
+.butao-cadastroBoleto {
+    
+  width: 32px auto;
+  color: #fff;
+  padding: 10px 54px;
+  text-transform: 2px;
+  font-weight: bold;
+  background: linear-gradient(to right, #e2e2ef, #15a0e1);
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.butao-cadastroBoleto:hover{
+  background: linear-gradient(to right,  #15a0e1, #e2e2ef);
+  letter-spacing: 0.9px;
+
+}
+.CaixaText-cadastroBoleto{
+    margin: 5px;
+   bottom: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  .obs-cadastroBoleto {
+    
+    margin-left: 95px;
+    margin-right: 95px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px 30px;
+
+  }
+

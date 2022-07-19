@@ -13,6 +13,10 @@ const controller = {
   // Retorna Pagina
   index: function (request, response, next) { response.render('index', page); },
 
+  registroFrom: async (request, response,) => {
+    response.render('cadastroUsuario', { recMenu: request.session.recMenu, rota: "cadastro" })
+  },
+
   //Cria Usuario
   salvarUsuario: async (request, response) => {
 
@@ -84,7 +88,6 @@ const controller = {
   
   
 
- 
   
   // salvarForm: async (req, res) => {
 
@@ -124,6 +127,8 @@ const controller = {
   },
 
   logarUsuario: async (request, response) => {
+
+    
 
     let { email, senha, logado } = request.body;
     let usuarioSalvo = fs.readFileSync(usuariosjson, { encoding: 'utf-8' });
