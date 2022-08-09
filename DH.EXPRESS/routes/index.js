@@ -43,7 +43,7 @@ router.get('/cadastro', cookieLogin, indexController.registroFrom);
 router.get('/list', cookieLogin, indexController.indexAll);
 router.get('/cadastro/:id', cookieLogin, indexController.indexById);
 router.get('/nome', indexController.indexNome);
-router.get('/CPF', cookieLogin, indexController.indexUsuarioCPF);
+router.get('/cpf/:id', cookieLogin, indexController.indexUsuarioCPF);
 
 router.get('/login', indexController.loginForm);
 router.post('/login', indexController.logarUsuario);

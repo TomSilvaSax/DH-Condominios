@@ -16,7 +16,16 @@ const UsuarioService = {
         });
         return Usuario;
     },
+    getUsuarioByCPF: async (Usuariocpf) => {
 
+        const Usuario = await database.Usuario.findOne({
+            where: {
+                CPF: Usuariocpf
+            }
+        });
+        return Usuario;
+
+    },
     getUsuarioById: async (id) => {
 
         const Usuario = await database.Usuario.findByPk(id)
@@ -25,16 +34,7 @@ const UsuarioService = {
 
     },
 
-    ListUsuarioCPF: async (UsuarioCPF) => {
-
-        const Usuario = await database.Usuario.findOne({
-            where: {
-                CPF: UsuarioCPF
-            }
-        });
-        return Usuario;
-
-    },
+    
 
     createUsuario: async (
         name,

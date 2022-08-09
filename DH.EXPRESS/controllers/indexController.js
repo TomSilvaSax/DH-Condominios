@@ -3,6 +3,7 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const fs = require('fs')
 
+
 const UsuarioService = require('../service/UsuarioService');
 const { resourceLimits } = require('worker_threads');
 
@@ -71,11 +72,12 @@ const controller = {
 
 
   indexUsuarioCPF: async (request, response) => {  
-    
+   
     const { CPF } = request.query
-    const Usuario = await UsuarioService.ListUsuarioCPF(CPF);
+
+    const Usuario = await UsuarioService.getUsuarioByCPF(CPF);
     return response.json(Usuario)
-  },           
+  },
 
   // indexByCpf: async (request, response) => {
   //   console.log("response.params:", response.params)
